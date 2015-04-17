@@ -4,11 +4,11 @@
 $date = getdate();
 
 // permet de regler un probleme de decalage horaire
-$heure = date("H") + 2; 
+$heure = date("H"); 
 
 switch ($heure){
 
-    case ($heure >= 20): // il fait nuit
+    case ($heure >= 22): // il fait nuit
     $val = 1;
     $css = "../css/nuit.css";
     break;
@@ -34,10 +34,10 @@ switch ($heure){
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Espace visiteur</title>
         <link rel="stylesheet" href="<?php echo ($css); ?>">
-        <script type="text/javascript" src="/scripts/script.js"></script>
     </head>
     <body>
-
+        
+        
         <div id="resultatCookie">
             <div id="affichage">
             <p>
@@ -57,7 +57,16 @@ switch ($heure){
             </div>
         </div>
 
-        <div id="continue">
+        
+        
+        
+        
+        
+        
+        
+
+            
+        <div id="continue">.selector
         <h1>Espace visiteur</h1>
             <form method="post" action="../scripts/ficheFraisVisiteur.php" name="feuilleFrais">
                 <h3>Saisie des frais</h3>
@@ -84,7 +93,18 @@ switch ($heure){
                 
             </form>
         </div>
+            
+
         
+        
+        
+        
+        
+        
+        
+        
+    
+
         <div id="continueplus">
          <h1>Consultation fiche de frais</h1>
             
@@ -139,7 +159,18 @@ switch ($heure){
             
         </div>
 
+        
+        
+        
+        
+        
+        
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="../scripts/magnetic/magneticScroll-1.0.js"></script>
         <script src="../scripts/script.js"></script>
+        
+    
+    
     </body>
 </html>

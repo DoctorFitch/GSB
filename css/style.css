@@ -23,24 +23,33 @@ body{
 /*=== TOP ===*/
 
 #tete{
-    height: 100px;
+    height: 120px;
     background-color: #3bafda; 
     text-align: center;
 }
 
-h1{
-    margin: 0px;
-    padding: 0px;
+#tete p{
     font-family: 'AvenirLt';
-    font-size: 100px;
+    font-size: 102px;
     color: white;
-
+    display: inline;
 }
 
+
+
 /*=== MID ===*/
+label{
+    bottom: 6px;
+    position: relative;
+    
+}
 
+form{
+    
+    width: 100%;
+}
 #boxIDPASS {
-
+    
     /* on centre horizontalement l'ensemble de la div */
     margin-left: auto;
     margin-right: auto;
@@ -55,18 +64,22 @@ h1{
     right: 0px;
     left: 0px;
     bottom: 0px;
-    
+
     /* police */
     font-family: 'AvenirLt';
     font-size: 16px;
+    text-align: left;
+       
 }
 
 #boxIDPASS input{
-    width: 155px;
+    border-color: white;
+    width: 98%;
 }
 
 #boxIDPASS .cssButton{
 
+    padding: 0px;
     /* on centre le bouton "s'identifier" */
     display: block;
     position: relative;
@@ -77,8 +90,7 @@ h1{
     margin-top: 20px;
     
     /* taille */
-    height: 20px;
-    width: 161px;
+    width: 100%;
     
     /* on enleve l'effet de relief */
     border: solid 1px white;
@@ -89,6 +101,7 @@ h1{
     
     /* couleur */
     background: #8fc400; /* W3C */
+    
 }
 
 #boxIDPASS .cssButton:hover{
