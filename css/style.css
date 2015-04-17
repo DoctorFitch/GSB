@@ -1,0 +1,183 @@
+/*=== POLICE ===*/
+@font-face {
+    font-family : "AvenirLt";
+    src: url('../fonts/Avenir/AvenirNextLTPro-Regular.woff');
+} /* avenir police */
+
+/*=== BODY ===*/
+
+html{
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 100%;
+    background-color: #fff;
+}
+body{
+    height: 100%;
+    margin: 0px;   
+    padding: 0px;
+    background-color: #37bc9b;
+    box-shadow: 0px 1px 50px black;
+}
+
+/*=== TOP ===*/
+
+#tete{
+    height: 100px;
+    background-color: #3bafda; 
+    text-align: center;
+}
+
+h1{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'AvenirLt';
+    font-size: 100px;
+    color: white;
+
+}
+
+/*=== MID ===*/
+
+#boxIDPASS {
+
+    /* on centre horizontalement l'ensemble de la div */
+    margin-left: auto;
+    margin-right: auto;
+    height: 97px;
+    display: block;
+    width: 161px; /* largeur obligatoire pour être centré */
+
+    /* on centre verticalement l'ensemble de la div */
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    
+    /* police */
+    font-family: 'AvenirLt';
+    font-size: 16px;
+}
+
+#boxIDPASS input{
+    width: 155px;
+}
+
+#boxIDPASS .cssButton{
+
+    /* on centre le bouton "s'identifier" */
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* on le decole des champs */
+    margin-top: 20px;
+    
+    /* taille */
+    height: 20px;
+    width: 161px;
+    
+    /* on enleve l'effet de relief */
+    border: solid 1px white;
+    
+    /* police */
+    font-family: 'AvenirLt';
+    font-size: 16px;
+    
+    /* couleur */
+    background: #8fc400; /* W3C */
+}
+
+#boxIDPASS .cssButton:hover{
+    
+    /* change la couleur du bouton lorsque l'on passe la souris dessus */
+     color: #ffffff;
+     background: #3bafda;
+}
+
+/*=== LOADER ===*/
+
+/* $Base */
+.loaders-bg-3 {
+  background-color: #F15A5A;
+    
+}
+.loader {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+    
+/* centrage horizontale */
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+    
+/* centrage verticale */
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+}
+
+/*	$Loader Multiple circle
+	========================================================================== */
+.loader-circles {
+  border-radius: 50px;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  -webkit-animation: spin 1s linear infinite;
+}
+.loader-circles:before, .loader-circles:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  border-radius: 50px;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  -webkit-animation: spinreverse 5s linear infinite;
+  animation: spinreverse 5s linear infinite;
+}
+.loader-circles:before {
+  top: 12px;
+  left: 12px;
+  bottom: 12px;
+  right: 12px;
+  -webkit-animation: spinreverse 10s linear infinite;
+  animation: spinreverse 10s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    tranform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    tranform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spinreverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+    tranform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    tranform: rotate(-360deg);
+  }
+}
+

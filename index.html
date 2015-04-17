@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>GSB - Connexion</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div id="tete">
+            <h1>GSB</h1>
+        </div>
+
+        <div id="boxIDPASS">
+            <form method="post" action="scripts/checkUser.php" name="identification">
+                
+                <!-- Identifiant/Mot de passe -->
+                <label for="nom">Identifiant</label><input type="text" name="nom" id="nom" required><br/><br/>
+                <label for="mdp">Mot de passe</label><input type="password" name="mdp" id="mdp" required><br/><br/>
+                
+                <!-- Bouton d'envoie -->
+                <input class="cssButton" type="submit" name="validation" value="S'identifier">
+                
+            </form>
+        </div> <!-- /boxIDPASS -->
+
+        <div id="pied"></div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

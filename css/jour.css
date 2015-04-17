@@ -1,0 +1,102 @@
+/*=== POLICE ===*/
+
+@font-face {
+    font-family : "AvenirLt";
+    src: url('../fonts/Avenir/AvenirNextLTPro-Regular.woff');
+} /* avenir police */
+
+/*=== BODY ===*/
+
+body{
+    height: 100%;
+    margin: 0px;   
+    padding: 0px;
+    background-color: #37bc9b; 
+    font-family: 'AvenirLt';
+}
+
+/*=== >> ECHO ===*/
+
+#resultatCookie{
+    
+    /* coloration du fond + taille texte */
+    background-color: #3bafda;
+    font-family: 'AvenirLt';
+    font-size: 130px;
+    color: #fff;
+    
+    /* coloration integrale de la div */
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+
+}
+
+#affichage{
+    display: none;
+}
+
+#virgule{
+    display: none;
+}
+
+#resultatCookie p{
+    
+    /* centrage verticale de la div <p> */
+    position: absolute;
+    margin: auto;
+    top: 40%;
+}
+
+/*=== >> ECHO >> VISITEUR.PHP/COMPTABLE.PHP ===*/
+
+#continue {
+    
+    /* permet un maintient des proportions a la suite du "bonjour" resiste au redimensionnement des fenetres */
+    height: 100%;
+    position:absolute;
+    top:100%;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+}
+
+#continue h1{
+    
+    /* permet un maintient des proportions a la suite du "bonjour" resiste au redimensionnement des fenetres */
+    font-family: 'AvenirLt';
+    text-align: center;
+}
+
+.h3 {
+    font-weight: 900;
+}
+label {
+    display: block;
+    float: left;
+    width: 180px;
+    font-size: 14px;
+  }
+
+
+#continueplus{
+    /* permet un maintient des proportions a la suite du "bonjour" resiste au redimensionnement des fenetres */
+    height: 100%;
+    position: absolute;
+    top:200%;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+    background-color: rgba(55, 188, 70, 0.78);
+}
+
+#pierre {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}

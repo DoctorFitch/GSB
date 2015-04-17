@@ -1,0 +1,58 @@
+/*=== POLICE ===*/
+@font-face {
+    font-family : "AvenirLt";
+    src: url('../fonts/Avenir/AvenirNextLTPro-Regular.woff');
+} /* avenir police */
+
+/*=== BODY ===*/
+body{
+    height: 100%;
+    margin: 0px;   
+    padding: 0px;
+    background-color: #37bc9b; 
+}
+
+/*=== >> ECHO ===*/
+
+#resultatCookie{
+    
+    /* coloration du fond + taille texte */
+    background-color: #245b6f;
+    font-family: 'AvenirLt';
+    font-size: 130px;
+    color: #fff;
+    
+    /* coloration integrale de la div */
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+
+}
+#resultatCookie p{
+    
+    /* centrage verticale de la div <p> */
+    position: absolute;
+    margin: auto;
+    top: 40%;
+}
+
+/*=== >> ECHO >> VISITEUR.PHP ===*/
+
+#continue {
+    
+    /* permet un maintient des proportions a la suite du "bonjour" resiste au redimensionnement des fenetres */
+    height: 100%;
+    position:absolute;
+    top:100%;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+}
+
+.label{
+    font-size: 26px;
+}
