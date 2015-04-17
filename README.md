@@ -47,6 +47,6 @@ else if($resultat && $cat == 'c')
 [...]
 ``` 
 
-#### Created by Fitch, Sushi and Triyoul © 2015
+###### Created by Fitch, Sushi and Triyoul © 2015
 
 
