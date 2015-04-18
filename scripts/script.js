@@ -7,3 +7,7 @@ $.magneticScroll({
 	'selector': 'div'
 });
 
+$('#test').click(function()
+{ 
+    $('#loader').fadeIn(1);
+});

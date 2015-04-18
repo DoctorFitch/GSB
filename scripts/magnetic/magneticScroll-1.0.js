@@ -14,7 +14,7 @@ jQuery.fn.reverse = [].reverse;
 			{
 				"selector": ".magnetic",
 				"easing": "swing",
-				"speed": 500,
+				"speed": 300,
 				"timeout": 200
 			};
 

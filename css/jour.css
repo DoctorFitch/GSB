@@ -1,31 +1,33 @@
 /*=== POLICE ===*/
 
-@font-face {
+@font-face 
+{
     font-family : "AvenirLt";
     src: url('../fonts/Avenir/AvenirNextLTPro-Regular.woff');
 } /* avenir police */
 
 /*=== BODY ===*/
 
-body{
+body
+{
     height: 100%;
     margin: 0px;   
     padding: 0px;
-    background-color: #37bc9b; 
+    background-color: #37bc9b;
     font-family: 'AvenirLt';
 }
 
 
-/*=== >> ECHO ===*/
+/*=== MESSAGE BIENVENUE ===*/
 
-#resultatCookie{
-    
+#resultatCookie
+{
     /* coloration du fond + taille texte */
     background-color: #3bafda;
     font-family: 'AvenirLt';
     font-size: 130px;
     color: #fff;
-    
+
     /* coloration integrale de la div */
     position:absolute;
     top:0;
@@ -33,29 +35,30 @@ body{
     left:0;
     right:0;
     overflow:hidden;
-
 }
 
-#affichage{
+#affichage
+{
     display: none;
 }
 
-#virgule{
+#virgule
+{
     display: none;
 }
 
 #resultatCookie p{
-    
+
     /* centrage verticale de la div <p> */
     position: absolute;
     margin: auto;
     top: 40%;
 }
 
-/*=== >> ECHO >> VISITEUR.PHP/COMPTABLE.PHP ===*/
+/*=== >> FORMULAIRE DE SAISIE ===*/
 
-#continue {
-    
+#continue 
+{
     /* permet un maintient des proportions a la suite du "bonjour" resiste au redimensionnement des fenetres */
     height: 100%;
     position:absolute;
@@ -66,25 +69,31 @@ body{
     overflow:hidden;
 }
 
-#continue h1{
-    
+#continue h1
+{
     /* permet un maintient des proportions a la suite du "bonjour" resiste au redimensionnement des fenetres */
     font-family: 'AvenirLt';
     text-align: center;
 }
 
-.h3 {
+.h3 
+{
     font-weight: 900;
 }
-label {
+
+label 
+{
     display: block;
     float: left;
     width: 180px;
     font-size: 14px;
-  }
+}
 
 
-#continueplus{
+/*=== >> CONSULTATION DES FICHES DE FRAIS ===*/
+
+#continueplus
+{
     /* permet un maintient des proportions a la suite du "bonjour" resiste au redimensionnement des fenetres */
     height: 100%;
     position: absolute;
@@ -96,8 +105,49 @@ label {
     background-color: rgba(55, 188, 70, 0.78);
 }
 
-#pierre {
+#pierre 
+{
     height: 100px;
     width: 100px;
     background-color: red;
+}
+
+/*	$Loader Carre
+========================================================================== */
+#loader {
+    display: none;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -100%;
+    top: 0;
+    width: 100%;
+}
+#loader:after {
+    background: #de4957;
+    content: '';
+    display: inline-block;
+    height: 50px;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    -webkit-animation: myanim 2s infinite;
+    -moz-animation: myanim 2s infinite;
+    -o-animation: myanim 2s infinite;
+    animation: myanim 2s infinite;
+}
+
+@-webkit-keyframes myanim {
+    0% {
+        -webkit-transform: rotate(0);
+    }
+    50% {
+        -webkit-transform: rotate(145deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
