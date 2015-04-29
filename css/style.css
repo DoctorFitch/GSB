@@ -10,6 +10,10 @@
     src: url('../fonts/Avenir/AvenirNextLTPro-Regular.woff');
 } /* avenir police */
 
+@font-face{
+    font-family: "Robot";
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
 /*=== BODY ===*/
 
 html{
@@ -29,92 +33,19 @@ body{
 /*=== TOP ===*/
 
 #tete{
-    height: 120px;
+    display: block;
+    height: 110px;
     background-color: #3bafda; 
     text-align: center;
 }
 
 #tete p{
-    font-family: 'AvenirLt';
-    font-size: 102px;
+    font-family: 'Roboto', sans-serif;
+    
+    font-size: 120px;
     color: white;
     display: inline;
-}
-
-
-
-/*=== MID ===*/
-label{
-    bottom: 6px;
-    position: relative;
-
-}
-
-form{
-
-    width: 100%;
-}
-#boxIDPASS {
-
-    /* on centre horizontalement l'ensemble de la div */
-    margin-left: auto;
-    margin-right: auto;
-    height: 97px;
-    display: block;
-    width: 161px; /* largeur obligatoire pour être centré */
-
-    /* on centre verticalement l'ensemble de la div */
-    position: absolute;
-    margin: auto;
-    top: 0px;
-    right: 0px;
-    left: 0px;
-    bottom: 0px;
-
-    /* police */
-    font-family: 'AvenirLt';
-    font-size: 16px;
-    text-align: left;
-
-}
-
-#boxIDPASS input{
-    border-color: white;
-    width: 98%;
-}
-
-#boxIDPASS .cssButton{
-
-    padding: 0px;
-    /* on centre le bouton "s'identifier" */
-    display: block;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-
-    /* on le decole des champs */
-    margin-top: 20px;
-
-    /* taille */
-    width: 100%;
-
-    /* on enleve l'effet de relief */
-    border: solid 1px white;
-
-    /* police */
-    font-family: 'AvenirLt';
-    font-size: 16px;
-
-    /* couleur */
-    background: #8fc400; /* W3C */
-
-}
-
-#boxIDPASS .cssButton:hover{
-
-    /* change la couleur du bouton lorsque l'on passe la souris dessus */
-    color: #ffffff;
-    background: #3bafda;
+    line-height: 110px;
 }
 
 /*=== LOADER ===*/
@@ -273,4 +204,216 @@ form{
         tranform: rotate(-360deg);
     }
 }
+
+/** HOSHIT **/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+
+
+
+.container {
+	margin: 0 auto;
+	text-align: center;
+	overflow: hidden;
+}
+
+.content {
+	font-size: 150%;
+	padding: 3em 0;
+}
+
+button,input,select,textarea{
+    font-family: 'Roboto', sans-serif;
+    font-size:100%;
+    margin:0;
+}
+
+/* partie set1 */
+
+.input {
+	position: relative;
+	z-index: 1;
+    font-family: 'Roboto', sans-serif;
+    display: table;
+    
+    /*lel*/
+
+    /* centrage verticale */
+    margin: auto;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+
+}
+
+.input__field {
+	position: relative;
+	display: block;
+	float: right;
+	padding: 0.8em;
+	width: 60%;
+	border: none;
+	border-radius: 0;
+	background: #3bafda;
+	color: red;
+	font-weight: bold;
+	font-family: 'Roboto', sans-serif;
+	-webkit-appearance: none; /* for box shadows to show on iOS */
+}
+
+.input__field:focus {
+	outline: none;
+}
+
+.input__label {
+	display: inline-block;
+	float: right;
+	padding: 0 1em;
+	width: 40%;
+	color: white;
+	font-weight: bold;
+	font-size: 70.25%;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.input__label-content {
+	position: relative;
+	display: block;
+	padding: 1.6em 0;
+	width: 100%;
+}
+
+.graphic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
+
+/* HOOOOOOOOOOOOOOOOOOSSSSSSSSSSSSSSSSSSSSSSSSSSHHHHHHHHHHHHHHHHHHHHHHHHHHIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIT */
+.input--hoshi {
+	overflow: hidden;
+}
+
+.input__field--hoshi {
+	margin-top: 1em;
+	padding: 0.85em 0.15em;
+	width: 100%;
+	background: transparent;
+	color: #595F6E;
+}
+
+.input__label--hoshi {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 0 0.25em;
+	width: 100%;
+	height: calc(100% - 1em);
+	text-align: left;
+	pointer-events: none;
+}
+
+.input__label-content--hoshi {
+	position: absolute;
+}
+
+.input__label--hoshi::before,
+.input__label--hoshi::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 10px);
+	border-bottom: 2px solid #3bafda;
+}
+
+.input__label--hoshi::after {
+	margin-top: 2px;
+	border-bottom: 4px solid red;
+	-webkit-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.input__label--hoshi-color-1::after {
+	border-color: hsl(200, 100%, 50%);
+}
+
+.input__label--hoshi-color-2::after {
+	border-color: hsl(160, 100%, 50%);
+}
+
+.input__label--hoshi-color-3::after {
+	border-color: hsl(20, 100%, 50%);
+}
+
+.input__field--hoshi:focus + .input__label--hoshi::after,
+.input--filled .input__label--hoshi::after {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.input__field--hoshi:focus + .input__label--hoshi .input__label-content--hoshi,
+.input--filled .input__label-content--hoshi {
+	-webkit-animation: anim-1 0.3s forwards;
+	animation: anim-1 0.3s forwards;
+}
+
+@-webkit-keyframes anim-1 {
+	50% {
+		opacity: 0;
+		-webkit-transform: translate3d(1em, 0, 0);
+		transform: translate3d(1em, 0, 0);
+	}
+	51% {
+		opacity: 0;
+		-webkit-transform: translate3d(-1em, -40%, 0);
+		transform: translate3d(-1em, -40%, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, -40%, 0);
+		transform: translate3d(0, -40%, 0);
+	}
+}
+
+@keyframes anim-1 {
+	50% {
+		opacity: 0;
+		-webkit-transform: translate3d(1em, 0, 0);
+		transform: translate3d(1em, 0, 0);
+	}
+	51% {
+		opacity: 0;
+		-webkit-transform: translate3d(-1em, -40%, 0);
+		transform: translate3d(-1em, -40%, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, -40%, 0);
+		transform: translate3d(0, -40%, 0);
+	}
+}
+
+
+
+
+
 

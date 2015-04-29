@@ -24,6 +24,7 @@
     }
 ?>
 
+
 <!doctype html>
 <html>
     <head>
@@ -58,10 +59,26 @@
         </div>
 
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         <!-- Affichage des formulaire de saisie -->
         <div id="continue">
         <h1>Espace visiteur</h1>
             <form method="post" action="../scripts/ficheFraisVisiteur.php" name="feuilleFrais">
+                <!-- Forfait classique -->
                 <h3>Saisie des frais</h3>
                 
                 <!-- Saisie de la période d'engagement  -->
@@ -80,6 +97,7 @@
             </form>   
             
             <form method="post" action="../scripts/ficheFraisVisiteur.php#box" name="feuilleHorsFrais">
+               
                 <!-- Hors forfait -->
                 <h3>Hors forfait</h3>
                 <label for="dateHF"> Date du hors forfait : </label><input type="date" name="dateHF"><br/><br/>      
@@ -91,53 +109,200 @@
                 <input class="cssButton" type="reset" name="resetHF" value="Effacer">
                 <input id="test" class="cssButton" type="submit" name="validationHF" value="Valider">
             </form>  
+            
            <span id="loader">Loading...</span>
+          
         </div>
              
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         <!-- Consultation des fiches de frais -->
         <div id="continueplus">
+           
+            <!-- Titre consultation -->
             <h1>Consultation fiche de frais</h1>
             
+            <!-- Bouton qui permet d'afficher ou non le tableau recapitulatif -->
+            <button id="afficheT">Faire apparaître tableau</button>
+            
+            <!-- Tableau -->
+            <span id="tableau">
                 <?php
-
+                    
+                    // On invoque le script de connexion
                     include("../scripts/connect.php");
 
-                    // Ecriture de la requête d'extraction en SQL
-                    $reqSQL= "SELECT nom, prenom FROM visiteur ORDER BY nom ASC;";
+                    
+                
+                    // Creation et envoi de la requete
+                    $selectionTableau = "SELECT annee, mois, nbJustificatifs, montantValide, idEtat FROM `gsb`.`fichefrais` ORDER BY mois ASC";
 
-                    // Envoi de la requête : on récupère le résultat dans le jeu
-                    // d'enregistrement $result
-                    $resultat= $connexion->query($reqSQL) or die ("Erreur dans la requete SQL '$reqSQL'");
+                    // On envoie la requete 
+                    $result = $connexion->query($selectionTableau) or die ("Erreur dans la requete SQL '$reqSQL'");
+    
+                    // On recupere le resultat de la requete dans un tableau associatif
+                    $ligne = $result->fetch();
 
-                    // Affichage de la requête
-                    echo "Résultat de la requête : ".$reqSQL."<hr>";
+                    // On initialise un compteur afin de mieux se reperer dans le tableau
+                    $numero = 1;
 
-                    // Lecture de la première ligne du jeu d'enregistrements et copie des données dans le tableau associatif à une dimension $ligne
-                    $ligne= $resultat->fetch();
-
-                    echo '<select size=1 name="cat">'."\n"; 
-                    echo '<option value="-1">Choisissez le visiteur<option>'."\n";
-
-                    // On boucle tant que $ligne #faux
-                    while($ligne != false)
-                    {
-                        // On stocke le contenu des cellules du tableau associatif dans des variables
-                        $nom=$ligne["nom"];
-                        $prenom=$ligne["prenom"];
-
-                        // on affiche les informations
-                        echo '<option value="$nom">'.$nom." ".$prenom; 
-                        echo '</option>'."\n"; 
-
-                        // Lecture de la ligne suivante du jeu d'enregistrementse
-                        $ligne= $resultat->fetch();
+                    // Verification de présence de données
+                    if($ligne == ""){ // Si pas de données on averti l'utilisateur
+                        echo "Il n'y a aucune fiche de frais renseignés";
                     }
-
-                    echo '</select>'."\n";
+                    else{ // Sinon on execute la requete
+                    
+                    // Creation du tableau
+                    echo '<table border="1" cellpadding="0" cellspacing="0">';
+                    // Creation de la premiere ligne
+                    echo'<tr>';
+                    // Creation des colonnes
+                    echo'<th>Numero</th>';
+                    echo'<th>Date</th>';
+                    echo'<th>Montant</th>';
+                    echo'<th>Modifier</th>';
+                    echo'<th>Etat</th>';
+                    // Fin de la premiere ligne
+                    echo'</tr>';
+                        
+                    // Recuperation des resultats
+                    while($ligne){
+                        
+                        // On recupere les valeurs contenu dans le tableau suivant les champs 
+                        $annee = $ligne["annee"];
+                        $mois = $ligne["mois"];
+                        $nbJ = $ligne["nbJustificatifs"];
+                        $montantV = $ligne["montantValide"];
+                        $etat = $ligne["idEtat"];
+                        
+                        
+                        // lisibilité de la date
+                        switch($mois){
+                            case 01:
+                                $dateFinale = 'Janvier'. " " . $annee;
+                                break;
+                            
+                            case 02:
+                                $dateFinale = 'Fevrier'. " " . $annee;
+                                break;
+                            
+                            case 03:
+                                $dateFinale = 'Mars'. " " . $annee;
+                                break;
+                            
+                            case 04:
+                                $dateFinale = 'Avril'. " " . $annee;
+                                break;
+                            
+                            case 05:
+                                $dateFinale = 'Mai'. " " . $annee;
+                                break;
+                            
+                            case 06:
+                                $dateFinale = 'Juin'. " " . $annee;
+                                break;
+                            
+                            case 07:
+                                $dateFinale = 'Juillet'. " " . $annee;
+                                break;
+                            
+                            case 08:
+                                $dateFinale = 'Aout'. " " . $annee;
+                                break;
+                            
+                            case 09:
+                                $dateFinale = 'Septembre'. " " . $annee;
+                                break;
+                            
+                            case 10:
+                                $dateFinale = 'Octobre'. " " . $annee;
+                                break;
+                            
+                            case 11:
+                                $dateFinale = 'Novembre'. " " . $annee;
+                                break;
+                            
+                            case 12:
+                                $dateFinale = 'Decembre'. " " . $annee;
+                                break; 
+                        }
+                        
+                        // Lisibilité des status
+                        switch($etat){
+                            case 'CL':
+                                $etatAfterS = 'Saisie clôturée';
+                                break;
+                            case 'CR':
+                                $etatAfterS = 'Saisie en cours';
+                                break;
+                            case 'RB':
+                                $etatAfterS = 'Remboursée';
+                                break;
+                            case 'VA':
+                                $etatAfterS = 'Validée et mise en paiement';
+                                break;
+                            
+                        }
+                        
+                        // On affiche le resultat
+                        // Creation de la premiere ligne
+                        echo '<tr>';
+                        // Creation des colonnes
+                        echo '<td>'.$numero.'</td>';
+                        echo '<td>'.$dateFinale.'</td>';
+                        echo '<td>'.$montantV.'</td>';
+                        echo '<td><a href="modification.php">Modifier cette fiche</td>';
+                        echo '<td>'.$etatAfterS.'</td>';
+                        // Fin de la creation de la premiere ligne
+                        echo '</tr>';
+                        
+                        // On passe a la ligne suivante du tableau associatif
+                        $ligne = $result->fetch();
+                        
+                        // On incremente le compteur de 1 afin d'établir une liste
+                        $numero++;
+                    }
+                    
+                    // On ferme le tableau
+                    echo '</table>';
+                    }
                 ?>
-        </div>
+                
+            </span> <!-- On ferme la div id="tableau" -->
+        </div> <!-- Fin div id="continueplus" -->
 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         <!-- Appel des scripts javascript pour les animations etc -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

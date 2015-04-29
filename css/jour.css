@@ -92,8 +92,17 @@ label
 
 /*=== >> CONSULTATION DES FICHES DE FRAIS ===*/
 
+/* Bouton pour faire apparaitre fiche de frais */
+
+#afficheT{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
 #continueplus
 {
+    
     /* permet un maintient des proportions a la suite du "bonjour" resiste au redimensionnement des fenetres */
     height: 100%;
     position: absolute;
@@ -103,6 +112,10 @@ label
     right:0;
     overflow:hidden;
     background-color: rgba(55, 188, 70, 0.78);
+}
+
+#tableau{
+    display:none;
 }
 
 #pierre 

@@ -21,22 +21,23 @@
 <?php
 
     include("../scripts/connect.php");
-
+    // header('Location: ../contents/visiteur.php');
     // variable d'aide a la creation du cookie pour regler conflit du localhost
     $domain = ($_SERVER['HTTP_HOST'] != 'localhost') ? $_SERVER['HTTP_HOST'] : false;
 
     // verifie que tous les champs soient remplis
     if (!empty($_POST)) {
-        if (empty($_POST['nom']) || empty($_POST['mdp'])) { 
+        if (empty($_POST['login']) || empty($_POST['password'])) { 
             
         }
         
         else {
             
             // initialisation des variables de session
-            $username = ($_POST['nom']);
-            $pass = ($_POST['mdp']);
+            $username = ($_POST['login']);
+            $pass = ($_POST['password']);
 
+            
             
             //Vérification des identifiants
             $req = $connexion->prepare('SELECT * FROM visiteur WHERE login = :username AND mdp = :password');
@@ -61,7 +62,7 @@
             else if($resultat && $cat == 'c'){
 
                 // Creation d'un cookie
-                setcookie('user', $_POST['nom'], 0, '/', $domain, false);
+                setcookie('user', $_POST['login'], 0, '/', $domain, false);
                 header('Refresh:2;url=../contents/comptable.php');
 
                 $req->closeCursor();
@@ -70,7 +71,7 @@
 
             else if($resultat && $cat == 'v'){
                 // Creation d'un cookie
-                setcookie('user', $_POST['nom'], 0, '/', $domain, false);
+                setcookie('user', $_POST['login'], 0, '/', $domain, false);
                 header('Refresh:2;url=../contents/visiteur.php');
 
                 $req->closeCursor();

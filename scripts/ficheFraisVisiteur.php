@@ -1,19 +1,3 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bidon</title>
-        <link rel="stylesheet" href="../css/style.css">
-    </head>
-    <body>
-        
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="js/main.js"></script>
-
 <?php
 
     include ('../scripts/connect.php');
@@ -38,35 +22,75 @@
     // Verification que le bouton submit appartient au formulaire des frais normaux
     if(isset($_POST['validation']))
     {
+        $date = date('Y-m-d');
         // Recuperation des donnees du formulaire de visiteur.php (fiche frais)
-        $dateFicheFrais = $_POST['date'];
+        $dateFicheFraisA = str_replace("-", "", substr($_POST['date'],-10, 4));
+        $dateFicheFraisM = str_replace("-", "", substr($_POST['date'],-5, 2));
         $repasFicheFrais = $_POST['repas'];
         $nuiteeFicheFrais = $_POST['nuitee'];
         $etapeFicheFrais = $_POST['etape'];
         $kilometreFicheFrais = $_POST['km'];
-
-        $date = str_replace("-", "", substr($dateFicheFrais,-10, 7));
+        
+        
 
         // On prepare les requete d'insertion
-        $sqlInsertRepas = 'INSERT INTO `gsb`.`lignefraisforfait` (`idVisiteur`, `mois`, `idFraisForfait`, `quantite`) VALUES (:idVisiteur, :mois, "REP", :quantite)';
-        $sqlInsertNuitee = 'INSERT INTO `gsb`.`lignefraisforfait` (`idVisiteur`, `mois`, `idFraisForfait`, `quantite`) VALUES (:idVisiteur, :mois, "NUI", :quantite)';
-        $sqlInsertEtape = 'INSERT INTO `gsb`.`lignefraisforfait` (`idVisiteur`, `mois`, `idFraisForfait`, `quantite`) VALUES (:idVisiteur, :mois, "ETP", :quantite)';
-        $sqlInsertKilometres = 'INSERT INTO `gsb`.`lignefraisforfait` (`idVisiteur`, `mois`, `idFraisForfait`, `quantite`) VALUES (:idVisiteur, :mois, "KM", :quantite)';
+        $creationFicheFrais = "INSERT INTO `gsb`.`fichefrais` (`idVisiteur`, `annee`, `mois`, `nbJustificatifs`, `montantValide`, `dateModif`, `idEtat`) VALUES (:idVisiteur, :annee, :mois, '1', '', '', 'CR')";
+        $sqlInsertRepas = 'INSERT INTO `gsb`.`lignefraisforfait` (`idVisiteur`, `annee`, `mois`, `idFraisForfait`, `quantite`) VALUES (:idVisiteur, :annee, :mois, "REP", :quantite)';
+        $sqlInsertNuitee = 'INSERT INTO `gsb`.`lignefraisforfait` (`idVisiteur`, `annee`, `mois`, `idFraisForfait`, `quantite`) VALUES (:idVisiteur, :annee, :mois, "NUI", :quantite)';
+        $sqlInsertEtape = 'INSERT INTO `gsb`.`lignefraisforfait` (`idVisiteur`, `annee`, `mois`, `idFraisForfait`, `quantite`) VALUES (:idVisiteur, :annee, :mois, "ETP", :quantite)';
+        $sqlInsertKilometres = 'INSERT INTO `gsb`.`lignefraisforfait` (`idVisiteur`, `annee`, `mois`, `idFraisForfait`, `quantite`) VALUES (:idVisiteur, :annee, :mois, "KM", :quantite)';
 
-
+        
+        // On verifie si le fiche de frais existe 
+        $verification = $connexion->prepare("SELECT COUNT(*) FROM `gsb`.`fichefrais` WHERE annee = :annee AND mois = :mois");
+        $verification->execute(array(
+                "annee" => $dateFicheFraisA,
+                "mois" => $dateFicheFraisM,
+                ));
+        
+        $nbLignes = $verification->fetchColumn();
+        if($nbLignes == 0){
+            // Creation de la fiche de frais initial
+                $reqCreationF = $connexion->prepare($creationFicheFrais);
+                $reqCreationF->execute(array(
+                    "idVisiteur" => $idUtilisateur,
+                    "annee" => $dateFicheFraisA,
+                    "mois" => $dateFicheFraisM,
+                ));
+        }
+        else{
+            echo 'Une fiche des frais à déjà été crée pour cette date';
+        }
+        
+        
+        // Verificaion d'une saisie de date
+        if(($dateFicheFraisA && $dateFicheFraisM) == ""){
+            echo "Vous devez saisir une date";
+        }
+        // Si une date à été saisie mais que tous les champs sont vides
+        else if (($repasFicheFrais == "") && ($nuiteeFicheFrais == "") && ($etapeFicheFrais == "") && ($kilometreFicheFrais == ""))
+        {
+            echo "Vous devez au moins saisir un frais";
+        }
+        // Si tout vas bien on execute les inserts
+        else {
+            
         // Affichage verificatif
         echo "ID : " .$idUtilisateur;
-        echo "<br>"."Date : " .$date;
+        echo "<br>"."Date : " .$dateFicheFraisA. " " .$dateFicheFraisM;
         echo "<br>"."Nombre de repas : " .$repasFicheFrais;
         echo "<br>"."Nombre de nuitee  : " .$nuiteeFicheFrais;
         echo "<br>"."Nombre d'etape  : " .$etapeFicheFrais;
         echo "<br>"."Nombre de kilometre  : " .$kilometreFicheFrais;
 
+        
+        
         // Requete INSERT pour remplir les repas 
         $reqRepas = $connexion->prepare($sqlInsertRepas);
         $reqRepas->execute(array(
-                "idVisiteur" => $idUtilisateur, 
-                "mois" => $date,
+                "idVisiteur" => $idUtilisateur,
+                "annee" => $dateFicheFraisA,
+                "mois" => $dateFicheFraisM,
                 "quantite" => $repasFicheFrais
                 ));
 
@@ -74,7 +98,8 @@
         $reqNuitee = $connexion->prepare($sqlInsertNuitee);
         $reqNuitee->execute(array(
                 "idVisiteur" => $idUtilisateur, 
-                "mois" => $date,
+                "annee" => $dateFicheFraisA,
+                "mois" => $dateFicheFraisM,
                 "quantite" => $nuiteeFicheFrais
                 ));
 
@@ -82,7 +107,8 @@
         $reqEtapes = $connexion->prepare($sqlInsertEtape);
         $reqEtapes->execute(array(
                 "idVisiteur" => $idUtilisateur, 
-                "mois" => $date,
+                "annee" => $dateFicheFraisA,
+                "mois" => $dateFicheFraisM,
                 "quantite" => $etapeFicheFrais
                 ));
 
@@ -90,11 +116,12 @@
         $reqKilometres = $connexion->prepare($sqlInsertKilometres);
         $reqKilometres->execute(array(
                 "idVisiteur" => $idUtilisateur, 
-                "mois" => $date,
+                "annee" => $dateFicheFraisA,
+                "mois" => $dateFicheFraisM,
                 "quantite" => $kilometreFicheFrais
                 ));
         }
-
+    }
 
     /////////////////////// PARTIE FRAIS HORS FORFAIT ///////////////////////
 
@@ -124,7 +151,65 @@
         }
     }
 
-    $connexion = null;
+
+    /////////////////////// MISE A JOUR DU TARIF POUR LA FICHE FRAIS ///////////////////////
+
+    // On recupere les montant en fonction des ID (ETP, KM, NUI, REP)  
+    $reqETP = $connexion->query('SELECT montant FROM `fraisforfait` WHERE id="etp"');
+    $resultat = $reqETP->fetch();
+    $ETP = $resultat[0];
+    
+    $reqKM = $connexion->query('SELECT montant FROM `fraisforfait` WHERE id="km"');
+    $resultat = $reqKM->fetch();
+    $KM = $resultat[0];
+
+    $reqNUI = $connexion->query('SELECT montant FROM `fraisforfait` WHERE id="nui"');
+    $resultat = $reqNUI->fetch();
+    $NUI = $resultat[0];
+
+    $reqREP = $connexion->query('SELECT montant FROM `fraisforfait` WHERE id="rep"');
+    $resultat = $reqREP->fetch();
+    $REP = $resultat[0];
+        
+    echo "<br><br>Montant ETP ".$ETP;
+    echo "<br>Montant KM ".$KM;
+    echo "<br>Montant NUI ".$NUI;
+    echo "<br>Montant REP ".$REP;
+
+    // On recupere tout les frais pour un combo mois+annee+id
+    $reqFraisETP = $connexion->query("SELECT quantite FROM `lignefraisforfait` WHERE idVisiteur='$idUtilisateur' AND annee='$dateFicheFraisA' AND mois='$dateFicheFraisM' AND idFraisForfait='etp'"); 
+    $ligne = $reqFraisETP->fetch();
+    $fraisETP = $ligne[0];
+
+    $reqFraisKM = $connexion->query("SELECT quantite FROM `lignefraisforfait` WHERE idVisiteur='$idUtilisateur' AND annee='$dateFicheFraisA' AND mois='$dateFicheFraisM' AND idFraisForfait='km'"); 
+    $ligne = $reqFraisKM->fetch();
+    $fraisKM = $ligne[0];
+
+    $reqFraisNUI = $connexion->query("SELECT quantite FROM `lignefraisforfait` WHERE idVisiteur='$idUtilisateur' AND annee='$dateFicheFraisA' AND mois='$dateFicheFraisM' AND idFraisForfait='nui'");
+    $ligne = $reqFraisNUI->fetch();
+    $fraisNUI = $ligne[0];
+
+    $reqFraisREP = $connexion->query("SELECT quantite FROM `lignefraisforfait` WHERE idVisiteur='$idUtilisateur' AND annee='$dateFicheFraisA' AND mois='$dateFicheFraisM' AND idFraisForfait='rep'");
+    $ligne = $reqFraisREP->fetch();
+    $fraisREP = $ligne[0];
+
+
+    echo "<br>Nombre d'étape ".$fraisETP;
+    echo "<br>Nombre de kilometres ".$fraisKM;
+    echo "<br>Nombre de nuit ".$fraisNUI;
+    echo "<br>Nombre de repas ".$fraisREP;
+
+    // Variable pour calculer le cout total
+    $coutTotal = ($fraisETP * $ETP) + ($fraisKM * $KM) + ($fraisNUI * $NUI) + ($fraisREP * $REP);
+    echo "<br>Montant total ". $coutTotal;
+    
+    $connexion->exec("UPDATE `gsb`.`fichefrais` SET `montantValide` = '$coutTotal', `fichefrais`.`dateModif` = '$date'  WHERE `fichefrais`.`idVisiteur` = '$idUtilisateur' AND `fichefrais`.`mois` = '$dateFicheFraisM' AND `fichefrais`.`annee` = '$dateFicheFraisA';");
+
+
+
+
+
+
+
+    $connexion = null; // On ferme la connexion une fois que tout est terminé
 ?>
-            </body>
-</html>
