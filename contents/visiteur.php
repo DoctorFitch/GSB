@@ -82,39 +82,7 @@
         <div id="continue">
         <h1>Espace visiteur</h1>
           
-          
-          
-          
-          
-          
-          
-           <!-- FHNGENDGNXEGSNG -->
-           <form method="post" action="scripts/checkUser.php" name="identification">
-                   <!-- Permet d'empecher l'autocompletion de google chrome -->
-                    <input class="input__field input__field--hoshi" type="text" name="login" id="fakelogin" style="display:none;" />
-                    
-                    <section class="content">
-                       
-                        <span class="input input--hoshi">
-                            <input class="input__field input__field--hoshi" type="text" name="login" id="login" />
-                            
-                            <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
-                                <span class="input__label-content input__label-content--hoshi">Login</span>
-                            </label>
-                            
-                        </span>
-                        
-                        <span class="input input--hoshi">
-                            <input class="input__field input__field--hoshi" type="password" name="password" id="password" />
-                            
-                            <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-5">
-                                <span class="input__label-content input__label-content--hoshi">Password</span>
-                            </label>
-                            
-                        </span>
-                    </section>
 
-            </form>
            
            
             <form method="post" action="../scripts/ficheFraisVisiteur.php" name="feuilleFrais">

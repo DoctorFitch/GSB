@@ -9,33 +9,46 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+       
         <div id="tete">
+            
             <p>GSB</p>
-        
 
-        <div id="boxIDPASS">
-            <form method="post" action="scripts/checkUser.php" name="identification">
-                
-				<section class="content">
-				<span class="input input--hoshi">
-					<input class="input__field input__field--hoshi" type="text" name="login" id="login" />
-					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
-						<span class="input__label-content input__label-content--hoshi">Login</span>
-					</label>
-				</span>
-				<span class="input input--hoshi">
-					<input class="input__field input__field--hoshi" type="password" name="password" id="password" />
-					<label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-5">
-						<span class="input__label-content input__label-content--hoshi">Password</span>
-					</label>
-				</span>
-			</section>
+
+            <div id="boxIDPASS">
                
-                <!-- Bouton d'envoie -->
-                <input class="cssButton" type="submit" name="validation" value="S'identifier">
+                <form method="post" action="scripts/checkUser.php" name="identification">
+                   <!-- Permet d'empêcher l'autocompletion de google chrome -->
+                    <input class="input__field input__field--hoshi" type="text" name="login" id="fakelogin" style="display:none;" />
+                    
+                    <section class="content">
+                       
+                        <span class="input input--hoshi">
+                            <input class="input__field input__field--hoshi" type="text" name="login" id="login" />
+                            
+                            <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                                <span class="input__label-content input__label-content--hoshi">Login</span>
+                            </label>
+                            
+                        </span>
+                        
+                        <span class="input input--hoshi">
+                            <input class="input__field input__field--hoshi" type="password" name="password" id="password" />
+                            
+                            <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-5">
+                                <span class="input__label-content input__label-content--hoshi">Password</span>
+                            </label>
+                            
+                        </span>
+                    </section>
+
+                    <!-- Bouton d'envoie -->
+                    
+                    <input class="cssButton" type="submit" name="validation" value="S'identifier">
+
+                </form>
                 
-            </form>
-        </div> <!-- /boxIDPASS -->
+            </div> <!-- /boxIDPASS -->
         
         </div>
         
@@ -44,10 +57,13 @@
 			
         <div id="pied"></div>
         
+        <!-- Partie appel du JavaScript -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="js/classie.js"></script>
         <script src="./scripts/script.js"></script>
+        
         <script>
+            
 			(function() {
 				// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
 				if (!String.prototype.trim) {
@@ -81,6 +97,9 @@
 					}
 				}
 			})();
+            
 		</script>
+       <!-- Fin JavaScripts -->
+       
     </body>
 </html>

@@ -64,7 +64,7 @@
         
         
         // Verificaion d'une saisie de date
-        if(($dateFicheFraisA && $dateFicheFraisM) == ""){
+        if(($dateFicheFraisA || $dateFicheFraisM) == ""){
             echo "Vous devez saisir une date";
         }
         // Si une date à été saisie mais que tous les champs sont vides
@@ -128,26 +128,25 @@
     // Verification que le bouton submit correspond au formulaire des frais hors forfait
     if(isset($_POST['validationHF']))
     {
+        $date = date('Y-m-d');
         // Recuperation des donnees du formulaire de visiteur.php (fiche frais hors forfait)
-        $dateFicheHorsFrais = $_POST['dateHF'];
+        $dateFicheFraisM = str_replace("-", "", substr($_POST['dateHF'],-5, 2));
         $libelleHorsForfait = $_POST['libelle'];
         $montantHorsForfait = $_POST['montant'];
 
-        $date = str_replace("-", "", substr($dateFicheHorsFrais,-10, 7));
 
         $sqlInsertFraisHF = 'INSERT INTO `gsb`.`lignefraishorsforfait` (`id`, `idVisiteur`, `mois`, `libelle`, `date`, `montant`) VALUES (NULL, :idVisiteur, :mois, :libelle, :date, :montant)'; 
 
         // Requete INSERT pour remplir les repas 
         $reqDateHF = $connexion->prepare($sqlInsertFraisHF);
-        if($reqDateHF->execute(array("idVisiteur" => $idUtilisateur, "mois" => $date, "libelle" => $libelleHorsForfait, "date" => $dateFicheHorsFrais, "montant" => $montantHorsForfait)) == true)
+        if($reqDateHF->execute(array("idVisiteur" => $idUtilisateur, "mois" => $dateFicheFraisM, "libelle" => $libelleHorsForfait, "date" => $date, "montant" => $montantHorsForfait)) == true)
         { 
             echo '<div id="infoEnvoie">Envoie du formulaire en cours, veuillez patientez...</div>';
-            header('Refresh:1000;url=../contents/visiteur.php');
+            echo $date;
         }
         else 
         {
             echo '<div id="infoEnvoie2">Une erreur est survenue impossible de traiter votre demande</div>';
-            header('Refresh:1000;url=../contents/visiteur.php');
         }
     }
 
@@ -176,12 +175,13 @@
     echo "<br>Montant NUI ".$NUI;
     echo "<br>Montant REP ".$REP;
 
+    if(isset($_POST['validation'])) {
     // On recupere tout les frais pour un combo mois+annee+id
-    $reqFraisETP = $connexion->query("SELECT quantite FROM `lignefraisforfait` WHERE idVisiteur='$idUtilisateur' AND annee='$dateFicheFraisA' AND mois='$dateFicheFraisM' AND idFraisForfait='etp'"); 
+    $reqFraisETP = $connexion->query("SELECT quantite FROM `lignefraisforfait` WHERE idVisiteur='$idUtilisateur' AND annee='$dateFicheFraisA' AND mois='$dateFicheFraisM' AND idFraisForfait='etp'");
     $ligne = $reqFraisETP->fetch();
     $fraisETP = $ligne[0];
 
-    $reqFraisKM = $connexion->query("SELECT quantite FROM `lignefraisforfait` WHERE idVisiteur='$idUtilisateur' AND annee='$dateFicheFraisA' AND mois='$dateFicheFraisM' AND idFraisForfait='km'"); 
+    $reqFraisKM = $connexion->query("SELECT quantite FROM `lignefraisforfait` WHERE idVisiteur='$idUtilisateur' AND annee='$dateFicheFraisA' AND mois='$dateFicheFraisM' AND idFraisForfait='km'");
     $ligne = $reqFraisKM->fetch();
     $fraisKM = $ligne[0];
 
@@ -194,17 +194,17 @@
     $fraisREP = $ligne[0];
 
 
-    echo "<br>Nombre d'étape ".$fraisETP;
-    echo "<br>Nombre de kilometres ".$fraisKM;
-    echo "<br>Nombre de nuit ".$fraisNUI;
-    echo "<br>Nombre de repas ".$fraisREP;
+    echo "<br>Nombre d'étape " . $fraisETP;
+    echo "<br>Nombre de kilometres " . $fraisKM;
+    echo "<br>Nombre de nuit " . $fraisNUI;
+    echo "<br>Nombre de repas " . $fraisREP;
 
     // Variable pour calculer le cout total
     $coutTotal = ($fraisETP * $ETP) + ($fraisKM * $KM) + ($fraisNUI * $NUI) + ($fraisREP * $REP);
-    echo "<br>Montant total ". $coutTotal;
-    
-    $connexion->exec("UPDATE `gsb`.`fichefrais` SET `montantValide` = '$coutTotal', `fichefrais`.`dateModif` = '$date'  WHERE `fichefrais`.`idVisiteur` = '$idUtilisateur' AND `fichefrais`.`mois` = '$dateFicheFraisM' AND `fichefrais`.`annee` = '$dateFicheFraisA';");
+    echo "<br>Montant total " . $coutTotal;
 
+    $connexion->exec("UPDATE `gsb`.`fichefrais` SET `montantValide` = '$coutTotal', `fichefrais`.`dateModif` = '$date'  WHERE `fichefrais`.`idVisiteur` = '$idUtilisateur' AND `fichefrais`.`mois` = '$dateFicheFraisM' AND `fichefrais`.`annee` = '$dateFicheFraisA';");
+    }
 
 
 
@@ -212,4 +212,5 @@
 
 
     $connexion = null; // On ferme la connexion une fois que tout est terminé
+    header('Refresh:2;url=../contents/visiteur.php');
 ?>
