@@ -13,7 +13,7 @@ body
     height: 100%;
     margin: 0px;   
     padding: 0px;
-    background-color: #37bc9b;
+    background-color: #de4957;
     font-family: 'AvenirLt';
 }
 
@@ -111,7 +111,7 @@ label
     left:0;
     right:0;
     overflow:hidden;
-    background-color: rgba(55, 188, 70, 0.78);
+    background-color: #5FD4FF;
 }
 
 #tableau{

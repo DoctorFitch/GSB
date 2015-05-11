@@ -34,6 +34,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Espace visiteur</title>
         <link rel="stylesheet" href="<?php echo ($css); ?>">
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/login.css">
+        
+        
     </head>
     
     <body>
@@ -77,6 +81,42 @@
         <!-- Affichage des formulaire de saisie -->
         <div id="continue">
         <h1>Espace visiteur</h1>
+          
+          
+          
+          
+          
+          
+          
+           <!-- FHNGENDGNXEGSNG -->
+           <form method="post" action="scripts/checkUser.php" name="identification">
+                   <!-- Permet d'empecher l'autocompletion de google chrome -->
+                    <input class="input__field input__field--hoshi" type="text" name="login" id="fakelogin" style="display:none;" />
+                    
+                    <section class="content">
+                       
+                        <span class="input input--hoshi">
+                            <input class="input__field input__field--hoshi" type="text" name="login" id="login" />
+                            
+                            <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                                <span class="input__label-content input__label-content--hoshi">Login</span>
+                            </label>
+                            
+                        </span>
+                        
+                        <span class="input input--hoshi">
+                            <input class="input__field input__field--hoshi" type="password" name="password" id="password" />
+                            
+                            <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-5">
+                                <span class="input__label-content input__label-content--hoshi">Password</span>
+                            </label>
+                            
+                        </span>
+                    </section>
+
+            </form>
+           
+           
             <form method="post" action="../scripts/ficheFraisVisiteur.php" name="feuilleFrais">
                 <!-- Forfait classique -->
                 <h3>Saisie des frais</h3>
@@ -84,7 +124,7 @@
                 <!-- Saisie de la période d'engagement  -->
                 <label for="date">Date d'engagement</label><input type="date" name="date"><br/><br/>                
                 
-                <!-- Identifiant/Mot de passe -->
+                <!-- Contenu -->
                 <label for="repas">Repas</label><input type="text" name="repas" id="repas" size="25" maxlength="25"><br/><br/>
                 <label for="nuitee">Nuitée(s)</label><input type="text" name="nuitee" id="nuitee" size="25" maxlength="25"><br/><br/>
                 <label for="etape">Etape(s)</label><input type="text" name="etape" id="etape" size="25" maxlength="25"><br/><br/>
@@ -94,7 +134,22 @@
                 <input class="cssButton" type="reset" name="reset" value="Effacer">
                 <input class="cssButton" type="submit" name="validation" value="Valider">
                 
-            </form>   
+                
+                
+            </form>
+            
+                  
+                  
+                  
+                  
+            
+            
+            
+            
+            
+            
+            
+            
             
             <form method="post" action="../scripts/ficheFraisVisiteur.php#box" name="feuilleHorsFrais">
                
@@ -307,7 +362,46 @@
         <!-- Appel des scripts javascript pour les animations etc -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="../scripts/magnetic/magneticScroll-1.0.js"></script>
+        <script src="../js/classie.js"></script>
         <script src="../scripts/script.js"></script>
+        
+        <script>
+            
+			(function() {
+				// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+				if (!String.prototype.trim) {
+					(function() {
+						// Make sure we trim BOM and NBSP
+						var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+						String.prototype.trim = function() {
+							return this.replace(rtrim, '');
+						};
+					})();
+				}
+
+				[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+					// in case the input is already filled..
+					if( inputEl.value.trim() !== '' ) {
+						classie.add( inputEl.parentNode, 'input--filled' );
+					}
+
+					// events:
+					inputEl.addEventListener( 'focus', onInputFocus );
+					inputEl.addEventListener( 'blur', onInputBlur );
+				} );
+
+				function onInputFocus( ev ) {
+					classie.add( ev.target.parentNode, 'input--filled' );
+				}
+
+				function onInputBlur( ev ) {
+					if( ev.target.value.trim() === '' ) {
+						classie.remove( ev.target.parentNode, 'input--filled' );
+					}
+				}
+			})();
+            
+		</script>
         
     </body>
 </html>
