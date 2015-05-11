@@ -7,7 +7,7 @@
 
     switch ($heure)
     {
-        case ($heure >= 23): // il fait nuit
+        case ($heure >= 24): // il fait nuit
         $val = 1;
         $css = "../css/nuit.css";
         break;
@@ -83,30 +83,50 @@
         <h1>Espace visiteur</h1>
           
 
-           
-           
-            <form method="post" action="../scripts/ficheFraisVisiteur.php" name="feuilleFrais">
-                <!-- Forfait classique -->
-                <h3>Saisie des frais</h3>
-                
-                <!-- Saisie de la période d'engagement  -->
-                <label for="date">Date d'engagement</label><input type="date" name="date"><br/><br/>                
-                
-                <!-- Contenu -->
-                <label for="repas">Repas</label><input type="text" name="repas" id="repas" size="25" maxlength="25"><br/><br/>
-                <label for="nuitee">Nuitée(s)</label><input type="text" name="nuitee" id="nuitee" size="25" maxlength="25"><br/><br/>
-                <label for="etape">Etape(s)</label><input type="text" name="etape" id="etape" size="25" maxlength="25"><br/><br/>
-                <label for="km">Kilomètres</label><input type="text" name="km" id="km" size="25" maxlength="25"><br/><br/>
-                
-                <!-- Bouton d'envoie -->
-                <input class="cssButton" type="reset" name="reset" value="Effacer">
+            <form method="post" action="../scripts/ficheFraisVisiteur.php"  name="feuilleFrais">
+
+            <section class="content">
+
+                <span class="input input--hoshi">
+                    <input class="input__field input__field--hoshi" type="date" name="date"/>
+                    <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                        <span class="input__label-content input__label-content--hoshi">Date d'engagement</span>
+                    </label>
+                </span>
+
+                <span class="input input--hoshi">
+                    <input class="input__field input__field--hoshi" type="text" name="repas" id="repas" />
+                    <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                        <span class="input__label-content input__label-content--hoshi">Repas</span>
+                    </label>
+                </span>
+
+                <span class="input input--hoshi">
+                    <input class="input__field input__field--hoshi" type="text" name="nuitee" id="nuitee" />
+                    <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                        <span class="input__label-content input__label-content--hoshi">Nuitée(s)</span>
+                    </label>
+                </span>
+
+                <span class="input input--hoshi">
+                    <input class="input__field input__field--hoshi" type="text" name="etape" id="etape" />
+                    <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                        <span class="input__label-content input__label-content--hoshi">Etape(s)</span>
+                    </label>
+                </span>
+
+                <span class="input input--hoshi">
+                    <input class="input__field input__field--hoshi" type="text" name="km" id="km" />
+                    <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                        <span class="input__label-content input__label-content--hoshi">Kilomètres</span>
+                    </label>
+                </span>
+
+            </section>
+
+            <!-- Bouton d'envoie -->
                 <input class="cssButton" type="submit" name="validation" value="Valider">
-                
-                
-                
             </form>
-            
-                  
                   
                   
                   
@@ -332,44 +352,45 @@
         <script src="../scripts/magnetic/magneticScroll-1.0.js"></script>
         <script src="../js/classie.js"></script>
         <script src="../scripts/script.js"></script>
-        
+
         <script>
-            
-			(function() {
-				// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-				if (!String.prototype.trim) {
-					(function() {
-						// Make sure we trim BOM and NBSP
-						var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-						String.prototype.trim = function() {
-							return this.replace(rtrim, '');
-						};
-					})();
-				}
 
-				[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
-					// in case the input is already filled..
-					if( inputEl.value.trim() !== '' ) {
-						classie.add( inputEl.parentNode, 'input--filled' );
-					}
+            (function() {
+                // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+                if (!String.prototype.trim) {
+                    (function() {
+                        // Make sure we trim BOM and NBSP
+                        var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                        String.prototype.trim = function() {
+                            return this.replace(rtrim, '');
+                        };
+                    })();
+                }
 
-					// events:
-					inputEl.addEventListener( 'focus', onInputFocus );
-					inputEl.addEventListener( 'blur', onInputBlur );
-				} );
+                [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+                    // in case the input is already filled..
+                    if( inputEl.value.trim() !== '' ) {
+                        classie.add( inputEl.parentNode, 'input--filled' );
+                    }
 
-				function onInputFocus( ev ) {
-					classie.add( ev.target.parentNode, 'input--filled' );
-				}
+                    // events:
+                    inputEl.addEventListener( 'focus', onInputFocus );
+                    inputEl.addEventListener( 'blur', onInputBlur );
+                } );
 
-				function onInputBlur( ev ) {
-					if( ev.target.value.trim() === '' ) {
-						classie.remove( ev.target.parentNode, 'input--filled' );
-					}
-				}
-			})();
-            
-		</script>
+                function onInputFocus( ev ) {
+                    classie.add( ev.target.parentNode, 'input--filled' );
+                }
+
+                function onInputBlur( ev ) {
+                    if( ev.target.value.trim() === '' ) {
+                        classie.remove( ev.target.parentNode, 'input--filled' );
+                    }
+                }
+            })();
+
+        </script>
+        <!-- Fin JavaScripts -->
         
     </body>
 </html>
