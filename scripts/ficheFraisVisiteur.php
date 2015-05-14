@@ -23,8 +23,8 @@ $resultIdentifiant->closeCursor();
 if (isset($_POST['validation'])) {
     $date = date('Y-m-d');
     // Recuperation des donnees du formulaire de visiteur.php (fiche frais)
-    $dateFicheFraisA = str_replace("-", "", substr($_POST['date'], -10, 4));
-    $dateFicheFraisM = str_replace("-", "", substr($_POST['date'], -5, 2));
+    $dateFicheFraisA = str_replace("-", "", substr($_POST['date'], -7, 4));
+    $dateFicheFraisM = str_replace("-", "", substr($_POST['date'], -2, 2));
     $repasFicheFrais = $_POST['repas'];
     $nuiteeFicheFrais = $_POST['nuitee'];
     $etapeFicheFrais = $_POST['etape'];
@@ -122,16 +122,17 @@ if (isset($_POST['validation'])) {
 if (isset($_POST['validationHF'])) {
     $date = date('Y-m-d');
     // Recuperation des donnees du formulaire de visiteur.php (fiche frais hors forfait)
-    $dateFicheFraisM = str_replace("-", "", substr($_POST['dateHF'], -5, 2));
+    $dateFicheHFraisA = str_replace("-", "", substr($_POST['dateHF'], -7, 4));
+    $dateFicheHFraisM = str_replace("-", "", substr($_POST['dateHF'], -2, 2));
     $libelleHorsForfait = $_POST['libelle'];
     $montantHorsForfait = $_POST['montant'];
 
 
-    $sqlInsertFraisHF = 'INSERT INTO `gsb`.`lignefraishorsforfait` (`id`, `idVisiteur`, `mois`, `libelle`, `date`, `montant`) VALUES (NULL, :idVisiteur, :mois, :libelle, :date, :montant)';
+    $sqlInsertFraisHF = 'INSERT INTO `gsb`.`lignefraishorsforfait` (`id`, `idVisiteur`, `annee`, `mois`, `libelle`, `date`, `montant`) VALUES (NULL, :idVisiteur, :annee, :mois, :libelle, :date, :montant)';
 
     // Requete INSERT pour remplir les repas
     $reqDateHF = $connexion->prepare($sqlInsertFraisHF);
-    if ($reqDateHF->execute(array("idVisiteur" => $idUtilisateur, "mois" => $dateFicheFraisM, "libelle" => $libelleHorsForfait, "date" => $date, "montant" => $montantHorsForfait)) == true) {
+    if ($reqDateHF->execute(array("idVisiteur" => $idUtilisateur,"annee" => $dateFicheHFraisA, "mois" => $dateFicheHFraisM, "libelle" => $libelleHorsForfait, "date" => $date, "montant" => $montantHorsForfait)) == true) {
         echo '<div id="infoEnvoie">Envoie du formulaire en cours, veuillez patientez...</div>';
         echo $date;
     } else {
@@ -189,13 +190,57 @@ if (isset($_POST['validation'])) {
     echo "<br>Nombre de repas " . $fraisREP;
 
     // Variable pour calculer le cout total
-    $coutTotal = ($fraisETP * $ETP) + ($fraisKM * $KM) + ($fraisNUI * $NUI) + ($fraisREP * $REP);
+    $coutTotal = ($fraisETP * $ETP) + ($fraisKM * $KM) + ($fraisNUI * $NUI) + ($fraisREP * $REP) ;
     echo "<br>Montant total " . $coutTotal;
 
     $connexion->exec("UPDATE `gsb`.`fichefrais` SET `montantValide` = '$coutTotal', `fichefrais`.`dateModif` = '$date'  WHERE `fichefrais`.`idVisiteur` = '$idUtilisateur' AND `fichefrais`.`mois` = '$dateFicheFraisM' AND `fichefrais`.`annee` = '$dateFicheFraisA';");
 }
 
+if (isset($_POST['validationHF'])) {
+
+    // On recupere la date HF
+    $dateFicheHFraisA = str_replace("-", "", substr($_POST['dateHF'], -7, 4));
+    $dateFicheHFraisM = str_replace("-", "", substr($_POST['dateHF'], -2, 2));
+    $montantFinalHF = 0;
+
+
+    // Ecriture de la requête d'extraction en SQL
+    $reqSQL= "SELECT montant FROM `lignefraishorsforfait` WHERE idVisiteur='$idUtilisateur' AND annee='$dateFicheHFraisA' AND mois='$dateFicheHFraisM';";
+
+    // Envoi de la requête : on récupère le résultat dans le jeu
+    // d'enregistrement $result
+    $calculMontantTT = $connexion->query($reqSQL) or die ("Erreur dans la requete SQL '$reqSQL'");
+
+    // Affichage de la requête
+    echo "Résultat de la requête : ".$reqSQL."<hr>";
+
+    // Lecture de la première ligne du jeu d'enregistrements et copie des données dans le tableau associatif à une dimension $montantTT
+    $montantTT = $calculMontantTT->fetch();
+
+    // On boucle tant que $ligne #faux
+    while($montantTT)
+    {
+        $montant = $montantTT["montant"];
+        $montantFinalHF += $montant;
+        echo "<br>Montant " .$montant;
+        // Lecture de la ligne suivante du jeu d'enregistrementse
+        $montantTT = $calculMontantTT->fetch();
+    }
+
+    // On va chercher le montant de "montantValid" dans la fiche de frais
+    $reqMontantValid = $connexion->query("SELECT montantValide FROM `fichefrais` WHERE idVisiteur='$idUtilisateur' AND annee='$dateFicheHFraisA' AND mois='$dateFicheHFraisM'");
+    $ligne = $reqMontantValid->fetch();
+    $montantValid = $ligne[0];
+
+    $montantFinalHF = $montantValid +$montantFinalHF;
+
+    $connexion->exec("UPDATE `gsb`.`fichefrais` SET `montantValide` = '$montantFinalHF', `fichefrais`.`dateModif` = '$date'  WHERE `fichefrais`.`idVisiteur` = '$idUtilisateur' AND `fichefrais`.`mois` = '$dateFicheHFraisM' AND `fichefrais`.`annee` = '$dateFicheHFraisA';");
+
+    echo "total :" .$montantFinalHF;
+
+}
 
 $connexion = null; // On ferme la connexion une fois que tout est terminé
 header('Refresh:2;url=../contents/visiteur.php');
+
 ?>
