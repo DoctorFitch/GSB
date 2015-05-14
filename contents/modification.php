@@ -96,7 +96,7 @@
         echo '<option value="$annee">' . $dateFinale;
         echo '</option>' . "\n";
 
-        // Lecture de la ligne suivante du jeu d'enregistrementse
+        // Lecture de la ligne suivante du jeu d'enregistrement
         $ligne = $resultat->fetch();
     }
 

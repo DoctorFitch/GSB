@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71191386-e2a0-45e4-86a2-b6df83c6d067" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/ficheFraisVisiteur.php" afterPath="$PROJECT_DIR$/scripts/ficheFraisVisiteur.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/modification.php" afterPath="$PROJECT_DIR$/contents/modification.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/visiteur.php" afterPath="$PROJECT_DIR$/contents/visiteur.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GSB.iws" />
@@ -36,7 +34,7 @@
       <file leaf-file-name="visiteur.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contents/visiteur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.4" vertical-offset="3644" max-vertical-offset="6064">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3644" max-vertical-offset="6064">
               <caret line="244" column="55" selection-start-line="244" selection-start-column="55" selection-end-line="244" selection-end-column="55" />
               <folding>
                 <marker date="1431625458005" expanded="true" signature="6648:6748" placeholder="SELECT annee..." />
@@ -48,10 +46,10 @@
       <file leaf-file-name="modification.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contents/modification.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.686636" vertical-offset="44" max-vertical-offset="1776">
-              <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.48387095" vertical-offset="908" max-vertical-offset="1776">
+              <caret line="83" column="22" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
               <folding>
-                <marker date="1431626551199" expanded="true" signature="584:644" placeholder="SELECT annee..." />
+                <marker date="1431628101008" expanded="true" signature="584:644" placeholder="SELECT annee..." />
               </folding>
             </state>
           </provider>
@@ -60,8 +58,8 @@
       <file leaf-file-name="ficheFraisVisiteur.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/ficheFraisVisiteur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.0" vertical-offset="3161" max-vertical-offset="4016">
-              <caret line="221" column="5" selection-start-line="221" selection-start-column="5" selection-end-line="221" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3161" max-vertical-offset="4016">
+              <caret line="232" column="29" selection-start-line="232" selection-start-column="29" selection-end-line="232" selection-end-column="29" />
               <folding>
                 <marker date="1431621664194" expanded="true" signature="137:248" placeholder="SELECT id FR..Visiteur..." />
                 <marker date="1431621664194" expanded="true" signature="1154:1330" placeholder="INSERT INTO ..." />
@@ -82,7 +80,6 @@
                 <marker date="1431621664194" expanded="true" signature="8060:8216" placeholder="SELECT quant..lignefraisforfait..." />
                 <marker date="1431621664194" expanded="true" signature="8678:8917" placeholder="UPDATE `gsb`..." />
                 <marker date="1431621664194" expanded="true" signature="9242:9378" placeholder="SELECT monta..lignefraishorsforfait..." />
-                <marker date="1431621664194" expanded="true" signature="9242:9378" placeholder="SELECT monta..lignefraishorsforfait..." />
                 <marker date="1431621664194" expanded="true" signature="10268:10399" placeholder="SELECT monta..fichefrais..." />
                 <marker date="1431621664194" expanded="true" signature="10552:10798" placeholder="UPDATE `gsb`..." />
               </folding>
@@ -93,7 +90,7 @@
       <file leaf-file-name="comptable.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contents/comptable.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.4" vertical-offset="1392" max-vertical-offset="2416">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1392" max-vertical-offset="2416">
               <caret line="97" column="12" selection-start-line="97" selection-start-column="12" selection-end-line="135" selection-end-column="18" />
               <folding>
                 <marker date="1429361992000" expanded="true" signature="3946:3995" placeholder="SELECT nom, ..visiteur..." />
@@ -215,7 +212,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -292,11 +288,12 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/wamp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="options.lastSelected" value="preferences.sourceCode.SQL" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -326,6 +323,9 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -333,9 +333,6 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="1">
@@ -377,13 +374,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -409,6 +406,92 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/contents/visiteur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3644" max-vertical-offset="6064">
+          <caret line="244" column="55" selection-start-line="244" selection-start-column="55" selection-end-line="244" selection-end-column="55" />
+          <folding>
+            <marker date="1431625458005" expanded="true" signature="6648:6748" placeholder="SELECT annee..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contents/modification.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1776">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1431628101008" expanded="true" signature="584:644" placeholder="SELECT annee..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/ficheFraisVisiteur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3161" max-vertical-offset="4016">
+          <caret line="232" column="29" selection-start-line="232" selection-start-column="29" selection-end-line="232" selection-end-column="29" />
+          <folding>
+            <marker date="1431621664194" expanded="true" signature="137:248" placeholder="SELECT id FR..Visiteur..." />
+            <marker date="1431621664194" expanded="true" signature="1154:1330" placeholder="INSERT INTO ..." />
+            <marker date="1431621664194" expanded="true" signature="1356:1509" placeholder="INSERT INTO ..." />
+            <marker date="1431621664194" expanded="true" signature="1536:1689" placeholder="INSERT INTO ..." />
+            <marker date="1431621664194" expanded="true" signature="1715:1868" placeholder="INSERT INTO ..." />
+            <marker date="1431621664194" expanded="true" signature="1899:2051" placeholder="INSERT INTO ..." />
+            <marker date="1431621664194" expanded="true" signature="2143:2220" placeholder="SELECT COUNT..fichefrais..." />
+            <marker date="1431621664194" expanded="true" signature="5576:5638" placeholder="INSERT INTO ..." />
+            <marker date="1431621664194" expanded="true" signature="5576:5754" placeholder="INSERT INTO ..." />
+            <marker date="1431621664194" expanded="true" signature="6509:6558" placeholder="SELECT monta..fraisforfait..." />
+            <marker date="1431621664194" expanded="true" signature="6642:6690" placeholder="SELECT monta..fraisforfait..." />
+            <marker date="1431621664194" expanded="true" signature="6773:6822" placeholder="SELECT monta..fraisforfait..." />
+            <marker date="1431621664194" expanded="true" signature="6907:6956" placeholder="SELECT monta..fraisforfait..." />
+            <marker date="1431621664194" expanded="true" signature="7278:7434" placeholder="SELECT quant..lignefraisforfait..." />
+            <marker date="1431621664194" expanded="true" signature="7539:7694" placeholder="SELECT quant..lignefraisforfait..." />
+            <marker date="1431621664194" expanded="true" signature="7798:7954" placeholder="SELECT quant..lignefraisforfait..." />
+            <marker date="1431621664194" expanded="true" signature="8060:8216" placeholder="SELECT quant..lignefraisforfait..." />
+            <marker date="1431621664194" expanded="true" signature="8678:8917" placeholder="UPDATE `gsb`..." />
+            <marker date="1431621664194" expanded="true" signature="9242:9378" placeholder="SELECT monta..lignefraishorsforfait..." />
+            <marker date="1431621664194" expanded="true" signature="10268:10399" placeholder="SELECT monta..fichefrais..." />
+            <marker date="1431621664194" expanded="true" signature="10552:10798" placeholder="UPDATE `gsb`..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contents/comptable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1392" max-vertical-offset="2416">
+          <caret line="97" column="12" selection-start-line="97" selection-start-column="12" selection-end-line="135" selection-end-column="18" />
+          <folding>
+            <marker date="1429361992000" expanded="true" signature="3946:3995" placeholder="SELECT nom, ..visiteur..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="528" max-vertical-offset="1632">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/jour.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1584" max-vertical-offset="6592">
+          <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/classie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="473" max-vertical-offset="1392">
+          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/contents/visiteur.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="5456" max-vertical-offset="5792">
@@ -622,7 +705,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.529954" vertical-offset="144" max-vertical-offset="1776">
           <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -630,10 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4423963" vertical-offset="496" max-vertical-offset="1424">
           <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
-          <folding>
-            <marker date="1431608106227" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..visiteur..." />
-            <marker date="1431608106227" expanded="true" signature="-1:-1" placeholder="SELECT categ..visiteur..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -665,7 +743,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/contents/comptable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.4" vertical-offset="1392" max-vertical-offset="2416">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1392" max-vertical-offset="2416">
           <caret line="97" column="12" selection-start-line="97" selection-start-column="12" selection-end-line="135" selection-end-column="18" />
           <folding>
             <marker date="1429361992000" expanded="true" signature="3946:3995" placeholder="SELECT nom, ..visiteur..." />
@@ -675,7 +753,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/contents/visiteur.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.4" vertical-offset="3644" max-vertical-offset="6064">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3644" max-vertical-offset="6064">
           <caret line="244" column="55" selection-start-line="244" selection-start-column="55" selection-end-line="244" selection-end-column="55" />
           <folding>
             <marker date="1431625458005" expanded="true" signature="6648:6748" placeholder="SELECT annee..." />
@@ -685,8 +763,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/ficheFraisVisiteur.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.0" vertical-offset="3161" max-vertical-offset="4016">
-          <caret line="221" column="5" selection-start-line="221" selection-start-column="5" selection-end-line="221" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3161" max-vertical-offset="4016">
+          <caret line="232" column="29" selection-start-line="232" selection-start-column="29" selection-end-line="232" selection-end-column="29" />
           <folding>
             <marker date="1431621664194" expanded="true" signature="137:248" placeholder="SELECT id FR..Visiteur..." />
             <marker date="1431621664194" expanded="true" signature="1154:1330" placeholder="INSERT INTO ..." />
@@ -707,7 +785,6 @@
             <marker date="1431621664194" expanded="true" signature="8060:8216" placeholder="SELECT quant..lignefraisforfait..." />
             <marker date="1431621664194" expanded="true" signature="8678:8917" placeholder="UPDATE `gsb`..." />
             <marker date="1431621664194" expanded="true" signature="9242:9378" placeholder="SELECT monta..lignefraishorsforfait..." />
-            <marker date="1431621664194" expanded="true" signature="9242:9378" placeholder="SELECT monta..lignefraishorsforfait..." />
             <marker date="1431621664194" expanded="true" signature="10268:10399" placeholder="SELECT monta..fichefrais..." />
             <marker date="1431621664194" expanded="true" signature="10552:10798" placeholder="UPDATE `gsb`..." />
           </folding>
@@ -716,10 +793,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/contents/modification.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.686636" vertical-offset="44" max-vertical-offset="1776">
-          <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.48387095" vertical-offset="908" max-vertical-offset="1776">
+          <caret line="83" column="22" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
           <folding>
-            <marker date="1431626551199" expanded="true" signature="584:644" placeholder="SELECT annee..." />
+            <marker date="1431628101008" expanded="true" signature="584:644" placeholder="SELECT annee..." />
           </folding>
         </state>
       </provider>
