@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71191386-e2a0-45e4-86a2-b6df83c6d067" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/checkUser.php" afterPath="$PROJECT_DIR$/scripts/checkUser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/connect.php" afterPath="$PROJECT_DIR$/scripts/connect.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/ficheFraisVisiteur.php" afterPath="$PROJECT_DIR$/scripts/ficheFraisVisiteur.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/jour.css" afterPath="$PROJECT_DIR$/css/jour.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/script.js" afterPath="$PROJECT_DIR$/scripts/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/visiteur.php" afterPath="$PROJECT_DIR$/contents/visiteur.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GSB.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,23 +29,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="visiteur.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="visiteur.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contents/visiteur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.28" vertical-offset="4924" max-vertical-offset="5792">
-              <caret line="341" column="38" selection-start-line="341" selection-start-column="16" selection-end-line="341" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.7050691" vertical-offset="1324" max-vertical-offset="5792">
+              <caret line="121" column="103" selection-start-line="121" selection-start-column="103" selection-end-line="121" selection-end-column="103" />
               <folding>
-                <marker date="1431545629086" expanded="true" signature="7131:7231" placeholder="SELECT annee..." />
+                <marker date="1431604961824" expanded="true" signature="7145:7245" placeholder="SELECT annee..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1075028" vertical-offset="0" max-vertical-offset="1104">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="307" max-vertical-offset="1632">
+              <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -60,8 +54,8 @@
       <file leaf-file-name="jour.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/jour.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4200" max-vertical-offset="6608">
-              <caret line="287" column="18" selection-start-line="287" selection-start-column="11" selection-end-line="287" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1584" max-vertical-offset="6592">
+              <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -98,9 +92,9 @@
         <option value="$PROJECT_DIR$/scripts/ficheFraisVisiteur.php" />
         <option value="$PROJECT_DIR$/scripts/connect.php" />
         <option value="$PROJECT_DIR$/scripts/checkUser.php" />
-        <option value="$PROJECT_DIR$/contents/visiteur.php" />
         <option value="$PROJECT_DIR$/css/jour.css" />
         <option value="$PROJECT_DIR$/scripts/script.js" />
+        <option value="$PROJECT_DIR$/contents/visiteur.php" />
       </list>
     </option>
   </component>
@@ -307,7 +301,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -315,7 +309,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19322917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19322917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -358,7 +352,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="5456" max-vertical-offset="5792">
           <caret line="341" column="38" selection-start-line="341" selection-start-column="16" selection-end-line="341" selection-end-column="38" />
           <folding>
-            <marker date="1431545629086" expanded="true" signature="7131:7231" placeholder="SELECT annee..." />
+            <marker date="1431604961824" expanded="true" signature="7145:7245" placeholder="SELECT annee..." />
           </folding>
         </state>
       </provider>
@@ -394,7 +388,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="5456" max-vertical-offset="5792">
           <caret line="341" column="38" selection-start-line="341" selection-start-column="16" selection-end-line="341" selection-end-column="38" />
           <folding>
-            <marker date="1431545629086" expanded="true" signature="7131:7231" placeholder="SELECT annee..." />
+            <marker date="1431604961824" expanded="true" signature="7145:7245" placeholder="SELECT annee..." />
           </folding>
         </state>
       </provider>
@@ -459,7 +453,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6416">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1431545629086" expanded="true" signature="7131:7231" placeholder="SELECT annee..." />
+            <marker date="1431604961824" expanded="true" signature="7145:7245" placeholder="SELECT annee..." />
           </folding>
         </state>
       </provider>
@@ -590,14 +584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/jour.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4200" max-vertical-offset="6608">
-          <caret line="287" column="18" selection-start-line="287" selection-start-column="11" selection-end-line="287" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/classie.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="473" max-vertical-offset="1392">
@@ -608,21 +594,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contents/visiteur.php">
+    <entry file="file://$PROJECT_DIR$/css/jour.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.28" vertical-offset="4924" max-vertical-offset="5792">
-          <caret line="341" column="38" selection-start-line="341" selection-start-column="16" selection-end-line="341" selection-end-column="38" />
-          <folding>
-            <marker date="1431545629086" expanded="true" signature="7131:7231" placeholder="SELECT annee..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="1584" max-vertical-offset="6592">
+          <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1075028" vertical-offset="0" max-vertical-offset="1104">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="307" max-vertical-offset="1632">
+          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contents/visiteur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7050691" vertical-offset="1324" max-vertical-offset="5792">
+          <caret line="121" column="103" selection-start-line="121" selection-start-column="103" selection-end-line="121" selection-end-column="103" />
+          <folding>
+            <marker date="1431604961824" expanded="true" signature="7145:7245" placeholder="SELECT annee..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -75,7 +75,7 @@
                     <section class="content">
 
                     <span class="input input--hoshi">
-                        <input class="input__field input__field--hoshi" type="month" name="date" required="true"/>
+                        <input class="input__field input__field--hoshiDATE" type="month" name="date" id="date" required="true"/>
                         <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
                             <span class="input__label-content input__label-content--hoshi">Date d'engagement</span>
                         </label>
