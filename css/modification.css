@@ -1,85 +1,14 @@
 /*=== POLICE ===*/
 
-@font-face
-{
-    font-family : "AvenirLt";
-    src: url('../fonts/Avenir/AvenirNextLTPro-Regular.woff');
-} /* avenir police */
+@import url(http://fonts.googleapis.com/css?family=Roboto);
 
 /*=== BODY ===*/
 
-body
-{
-    height: 100%;
+body {
     margin: 0px;
     padding: 0px;
-    background-color: #de4957;
-    font-family: 'AvenirLt';
-}
-
-
-/*=== MESSAGE BIENVENUE ===*/
-
-#resultatCookie
-{
-    /* coloration du fond + taille texte */
-    background-color: #3bafda;
-    font-family: 'AvenirLt';
-    font-size: 130px;
-    color: #fff;
-
-    /* coloration integrale de la div */
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    overflow:hidden;
-}
-
-#affichage
-{
-    display: none;
-}
-
-#virgule
-{
-    display: none;
-}
-
-#resultatCookie p{
-
-    /* centrage verticale de la div <p> */
-    position: absolute;
-    margin: auto;
-    top: 40%;
-}
-
-/*=== >> FORMULAIRE DE SAISIE ===*/
-
-#continue
-{
-    /* permet un maintient des proportions a la suite du "bonjour" resiste au redimensionnement des fenetres */
-    height: 100%;
-    position:absolute;
-    top:100%;
-    bottom:0;
-    left:0;
-    right:0;
-    overflow:hidden;
-
-}
-
-#continue h1
-{
-    /* permet un maintient des proportions a la suite du "bonjour" resiste au redimensionnement des fenetres */
-    font-family: 'AvenirLt';
-    text-align: center;
-}
-
-.h3
-{
-    font-weight: 900;
+    background-color: #93E4FF;
+    font-family: 'Roboto', sans-serif;
 }
 
 label
@@ -90,82 +19,6 @@ label
     font-size: 14px;
 }
 
-
-/*=== >> CONSULTATION DES FICHES DE FRAIS ===*/
-
-/* Bouton pour faire apparaitre fiche de frais */
-
-#afficheT{
-    width: 100px;
-    height: 100px;
-    background-color: red;
-}
-
-#continueplus
-{
-
-    /* permet un maintient des proportions a la suite du "bonjour" resiste au redimensionnement des fenetres */
-    height: 100%;
-    position: absolute;
-    top:200%;
-    bottom:0;
-    left:0;
-    right:0;
-    overflow:hidden;
-    background-color: #5FD4FF;
-}
-
-#tableau{
-    display:none;
-}
-
-#pierre
-{
-    height: 100px;
-    width: 100px;
-    background-color: red;
-}
-
-/*	$Loader Carre
-========================================================================== */
-#loader {
-    display: none;
-    height: 100%;
-    left: 0;
-    overflow: hidden;
-    position: absolute;
-    text-indent: -100%;
-    top: 0;
-    width: 100%;
-}
-#loader:after {
-    background: #de4957;
-    content: '';
-    display: inline-block;
-    height: 50px;
-    left: 50%;
-    margin: -25px 0 0 -25px;
-    position: absolute;
-    top: 50%;
-    width: 50px;
-    -webkit-animation: myanim 2s infinite;
-    -moz-animation: myanim 2s infinite;
-    -o-animation: myanim 2s infinite;
-    animation: myanim 2s infinite;
-}
-
-@-webkit-keyframes myanim {
-    0% {
-        -webkit-transform: rotate(0);
-    }
-    50% {
-        -webkit-transform: rotate(145deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
-}
-
 /** Normalisation **/
 
 @import url(http://fonts.googleapis.com/css?family=Roboto);
@@ -174,8 +27,6 @@ label
 *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
 .clearfix:before, .clearfix:after { content: ''; display: table; }
 .clearfix:after { clear: both; }
-
-
 
 
 .container {
@@ -279,7 +130,7 @@ button,input,select,textarea{
     padding: 0.85em 0.15em;
     width: 100%;
     background: transparent;
-    color: #3bafda;
+    color: #23697F;
 }
 
 .input__field--hoshiDATE {
@@ -337,8 +188,6 @@ button,input,select,textarea{
     border-color: white;
 }
 
-
-
 .input__field--hoshi:focus + .input__label--hoshi::after,
 .input--filled .input__label--hoshi::after {
     -webkit-transform: translate3d(0, 0, 0);
@@ -387,37 +236,99 @@ button,input,select,textarea{
     }
 }
 
-/************ Partie formulaire *****************/
-
-#formulaireVisiteurF {
-    float: left;
-    margin-left: 8%;
-}
-
-#formulaireVisiteurHF {
-    float: right;
-    margin-right: 8%;
-
-}
-
-#formulaireVisiteurF h3 {
-    text-align: center;
-}
-
-#formulaireVisiteurHF h3 {
-    text-align: center;
-}
 
 /**************** disposition ****************/
 
+#titre h1{
+    text-align: center;
+    margin-bottom: 5%;
+}
+
 #organisationModifDroite{
-    background-color: black;
+
     float: right;
-    margin-right: 400px;
+    margin-right: 10%;
+    margin-top: -18px;
 }
 
 #organisationModifGauche{
+    margin-left: 10%;
 
-    margin-left: 400px;
+}
+
+#listeDeroulante{
+    text-align: center;
+
+}
+
+.cssButton1{
+    margin-bottom: 4%;
+    width: auto;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #3bafda;
+    background-image: -moz-linear-gradient(center top , #DD4B39, #D14836);
+    border: 1px solid transparent;
+    color: #fff;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+    border-radius: 2px 2px 2px 2px;
+    font-size: 18px;
+    height: 40px;
+    min-width: 159px;
+    font-family: 'Roboto', sans-serif;
+    white-space: nowrap;
+    font-weight: bold;
+}
+.cssButton1:hover{
+    background-color: white;
+    background-image: -moz-linear-gradient(center top , #DD4B39, #C53727);
+    color: #3bafda;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.cssButton{
+    margin-top: 10%;
+    width: auto;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #3bafda;
+    background-image: -moz-linear-gradient(center top , #DD4B39, #D14836);
+    border: 1px solid transparent;
+    color: #fff;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+    border-radius: 2px 2px 2px 2px;
+    font-size: 18px;
+    height: 40px;
+    min-width: 200px;
+    font-family: 'Roboto', sans-serif;
+    white-space: nowrap;
+    font-weight: bold;
+}
+.cssButton:hover{
+    background-color: white;
+    background-image: -moz-linear-gradient(center top , #DD4B39, #C53727);
+    color: #3bafda;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+#messageE {
+    text-align: center;
+}
+
+#organisationModifDroite h3 {
+    margin-bottom: 20%;
+}
+
+#organisationModifGauche h3 {
 
 }

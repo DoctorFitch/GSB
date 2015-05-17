@@ -10,7 +10,7 @@ body
     height: 100%;
     margin: 0px;   
     padding: 0px;
-    background-color: #de4957;
+    background-color: #46D2FF;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -20,7 +20,7 @@ body
 #resultatCookie
 {
     /* coloration du fond + taille texte */
-    background-color: #3bafda;
+    background-color: #23697F;
     font-size: 130px;
     color: #fff;
 
@@ -107,7 +107,7 @@ label
     left:0;
     right:0;
     overflow:hidden;
-    background-color: #5FD4FF;
+    background-color: #93E4FF;
 }
 
 #tableau{
@@ -272,7 +272,7 @@ button,input,select,textarea{
     padding: 0.85em 0.15em;
     width: 100%;
     background: transparent;
-    color: #3bafda;
+    color: #23697F;
 }
 
 .input__field--hoshiDATE {
@@ -280,7 +280,7 @@ button,input,select,textarea{
     padding: 0.85em 0.15em;
     width: 100%;
     background: transparent;
-    color: #de4957;
+    color: #46D2FF;
 }
 
 
@@ -398,7 +398,7 @@ button,input,select,textarea{
     margin-bottom: 20%;
 }
 
-#formulaireVisiteurHF h3 {
+#formulaireVisiteurHF {
     margin-top: 20%;
     text-align: center;
     margin-bottom: 20%;

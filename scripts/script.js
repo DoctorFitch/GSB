@@ -35,10 +35,10 @@ $('#date').focus(function() {
     }
 
     if(estRempli == true) {
-        $('#date').css('color', 'white');
+        $('#date').css('color', '#23697F');
     }
     else {
-        $('#date').css('color', '#de4957');
+        $('#date').css('color', '#46D2FF');
     }
 });
 
@@ -50,10 +50,10 @@ $('#date').blur(function() {
     }
 
     if(estRempli == true) {
-        $('#date').css('color', 'white');
+        $('#date').css('color', '#23697F');
     }
     else {
-        $('#date').css('color', '#de4957');
+        $('#date').css('color', '#46D2FF');
     }
 });
 
@@ -67,10 +67,10 @@ $('#dateHF').focus(function() {
     }
 
     if(estRempli == true) {
-        $('#dateHF').css('color', 'white');
+        $('#dateHF').css('color', '#23697F');
     }
     else {
-        $('#dateHF').css('color', '#de4957');
+        $('#dateHF').css('color', '#46D2FF');
     }
 });
 
@@ -82,10 +82,10 @@ $('#dateHF').blur(function() {
     }
 
     if(estRempli == true) {
-        $('#dateHF').css('color', 'white');
+        $('#dateHF').css('color', '#23697F');
     }
     else {
-        $('#dateHF').css('color', '#de4957');
+        $('#dateHF').css('color', '#46D2FF');
     }
 });
 

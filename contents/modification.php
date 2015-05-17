@@ -16,7 +16,9 @@
 </head>
 <body>
 
+<div id="titre">
 <h1>Modification frais & hors forfait</h1>
+</div>
 
 <?php
 
@@ -50,6 +52,7 @@ $resultIdentifiant->closeCursor();
 //////////////////// CREATION DE LA LISTE DEROULANTE //////////////////
 ///////////////////////////////////////////////////////////////////////
 
+echo '<div id="listeDeroulante">';
 // Ecriture de la requête d'extraction en SQL
 $reqSQL = "SELECT annee, mois FROM `gsb`.`fichefrais` ORDER BY mois ASC";
 
@@ -131,10 +134,12 @@ while ($ligne != false) {
     $ligne = $resultat->fetch();
         }
 
-echo '<input class="cssButton" type="submit" name="validation" value="Valider">';
 
 echo '</select>' . "\n";
+echo '<input class="cssButton1" type="submit" name="validation" value="Valider">';
 echo '</form>';
+
+echo '</div>';
 
 
 $dateYear = str_replace(" ", "", substr(@$_POST["dateFiche"], -7, 4));
@@ -170,6 +175,7 @@ $kmTab = $ligne4[0];
 ///////////////////////////////////////////////////////////////////////
 
 echo '<div id="organisationModifDroite">';
+echo '<h3>Frais hors-forfait</h3>';
 // Creation et envoi de la requete
 $selectionTableau = "SELECT id, libelle, montant FROM `gsb`.`lignefraishorsforfait` WHERE mois = '$dateMonth' AND annee = '$dateYear' ORDER BY mois ASC";
 
@@ -188,7 +194,7 @@ if ($ligne == "") { // Si pas de données on averti l'utilisateur
 } else { // Sinon on execute la requete
 
     // Creation du tableau
-    echo '<table border="1" cellpadding="0" cellspacing="0">';
+    echo '<table border="2" cellpadding="10" cellspacing="0">';
     // Creation de la premiere ligne
     echo '<tr>';
     // Creation des colonnes
@@ -263,7 +269,7 @@ if ($ligne == "") { // Si pas de données on averti l'utilisateur
         echo '<td>' . $libelle . '</td>';
         echo '<td>' . $montant . '</td>';
 
-        echo '<td><a href="modification.php?action=' . $id . '">Supprimer</td>';
+        echo '<td><a href="modification.php?action=' . $id . '">x</td>';
         // Fin de la creation de la premiere ligne
         echo '</tr>';
 
@@ -287,7 +293,7 @@ if (isset($_GET['action']) && $_GET['action'] != "") {
 
 
 if (isset($_POST['validation2'])) {
-    echo @$_COOKIE['dateMonth'];
+    
 
     @$CookieDateMonth = $_COOKIE['dateMonth'];
     @$CookieDateYear = $_COOKIE['dateYear'];
@@ -302,7 +308,7 @@ if (isset($_POST['validation2'])) {
 
 
     if ($CookieDateMonth < $dateActuelleMois || $CookieDateMonth > $dateActuelleMois) {
-        echo "Impossible de modifier cette fiche car elle n'appartient pas au mois en cours";
+        echo '<div id="messageE">Impossible de modifier cette fiche car elle n\'appartient pas au mois en cours</div>';
     } else {
 
 
@@ -357,6 +363,7 @@ if (isset($_POST['validation2'])) {
 ?>
 
 <div id="organisationModifGauche">
+<h3>Frais hors-forfait</h3>
 <!-- Formulaire de modification -->
 <form method="post" action="" name="feuilleFrais">
     <section class="content">
