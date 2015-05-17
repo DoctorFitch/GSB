@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 15 Mai 2015 à 15:12
+-- Généré le :  Dim 17 Mai 2015 à 20:50
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -61,16 +61,6 @@ CREATE TABLE IF NOT EXISTS `fichefrais` (
   KEY `annee` (`annee`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Contenu de la table `fichefrais`
---
-
-INSERT INTO `fichefrais` (`idVisiteur`, `annee`, `mois`, `nbJustificatifs`, `montantValide`, `dateModif`, `idEtat`) VALUES
-('a17', 2015, '05', 1, '315.62', '2015-05-15', 'CR'),
-('a17', 2015, '06', 1, '431.24', '2015-05-15', 'CR'),
-('a17', 2015, '07', 1, '646.86', '2015-05-15', 'CR'),
-('a17', 2015, '09', 1, '2280.00', '2015-05-15', 'CR');
-
 -- --------------------------------------------------------
 
 --
@@ -109,30 +99,9 @@ CREATE TABLE IF NOT EXISTS `lignefraisforfait` (
   PRIMARY KEY (`idVisiteur`,`mois`,`idFraisForfait`),
   KEY `idFraisForfait` (`idFraisForfait`),
   KEY `annee` (`annee`),
-  KEY `annee_2` (`annee`)
+  KEY `annee_2` (`annee`),
+  KEY `annee_3` (`annee`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Contenu de la table `lignefraisforfait`
---
-
-INSERT INTO `lignefraisforfait` (`idVisiteur`, `annee`, `mois`, `idFraisForfait`, `quantite`) VALUES
-('a17', 2015, '05', 'ETP', 1),
-('a17', 2015, '05', 'KM', 1),
-('a17', 2015, '05', 'NUI', 1),
-('a17', 2015, '05', 'REP', 1),
-('a17', 2015, '06', 'ETP', 2),
-('a17', 2015, '06', 'KM', 2),
-('a17', 2015, '06', 'NUI', 2),
-('a17', 2015, '06', 'REP', 2),
-('a17', 2015, '07', 'ETP', 3),
-('a17', 2015, '07', 'KM', 3),
-('a17', 2015, '07', 'NUI', 3),
-('a17', 2015, '07', 'REP', 3),
-('a17', 2015, '09', 'ETP', 5),
-('a17', 2015, '09', 'KM', 500),
-('a17', 2015, '09', 'NUI', 14),
-('a17', 2015, '09', 'REP', 12);
 
 -- --------------------------------------------------------
 
@@ -149,16 +118,8 @@ CREATE TABLE IF NOT EXISTS `lignefraishorsforfait` (
   `date` date DEFAULT NULL,
   `montant` decimal(10,2) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `idVisiteur` (`idVisiteur`,`mois`),
-  KEY `annee` (`annee`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Contenu de la table `lignefraishorsforfait`
---
-
-INSERT INTO `lignefraishorsforfait` (`id`, `idVisiteur`, `annee`, `mois`, `libelle`, `date`, `montant`) VALUES
-(1, 'a17', 2015, '05', 'Gilles', '2015-05-15', '100.00');
+  KEY `idVisiteur` (`idVisiteur`,`mois`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 -- --------------------------------------------------------
 
