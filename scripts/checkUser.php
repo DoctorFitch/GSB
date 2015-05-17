@@ -46,10 +46,6 @@
                     $req->closeCursor();
                     exit;
                 }
-                else{
-                    header('Refresh:2;url=../index.html');
-                    include("../scripts/loader.php");
-                }
 
             } // si bon combo
 

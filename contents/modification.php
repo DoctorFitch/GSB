@@ -340,22 +340,25 @@ if (isset($_POST['validation2'])) {
         $resultat = $reqREP->fetch();
         $REP = $resultat[0];
 
-        echo "<br><br>Montant ETP " . $ETP;
-        echo "<br>Montant KM " . $KM;
-        echo "<br>Montant NUI " . $NUI;
-        echo "<br>Montant REP " . $REP;
+        // Ecriture de la requête d'extraction en SQL
+        $reqSQL = "SELECT montant FROM `gsb`.`lignefraishorsforfait` WHERE idVisiteur='$idUtilisateur' AND annee='$CookieDateYear' AND mois='$CookieDateMonth' ORDER BY mois ASC";
 
-// On recupere les montant fraichement ressaisie ou non dans le formulaire de modification
+        // Envoi de la requête : on récupère le résultat dans le jeu
+        // d'enregistrement $result
+        $resultat = $connexion->query($reqSQL) or die ("Erreur dans la requete SQL '$reqSQL'");
 
+        // Lecture de la première ligne du jeu d'enregistrements et copie des données dans le tableau associatif à une dimension $ligne
+        $ligne = $resultat->fetch();
 
-        echo "<br>Nombre d'étape " . $fraisETP;
-        echo "<br>Nombre de kilometres " . $fraisKM;
-        echo "<br>Nombre de nuit " . $fraisNUI;
-        echo "<br>Nombre de repas " . $fraisREP;
+        // On boucle tant que $ligne #faux
+        while ($ligne != false) {
+            // On stocke le contenu des cellules du tableau associatif dans des variables
+            @$montantTotalHF += $ligne["montant"];
+            $ligne = $resultat->fetch();
+        }
 
 // Variable pour calculer le cout total
-        $coutTotal = (($fraisETP * $ETP) + ($fraisKM * $KM) + ($fraisNUI * $NUI) + ($fraisREP * $REP));
-        echo "<br>Montant total " . $coutTotal;
+        $coutTotal = (($fraisETP * $ETP) + ($fraisKM * $KM) + ($fraisNUI * $NUI) + ($fraisREP * $REP)) + @$montantTotalHF;
 
         $connexion->exec("UPDATE `gsb`.`fichefrais` SET `montantValide` = '$coutTotal', `fichefrais`.`dateModif` = '$date'  WHERE `fichefrais`.`idVisiteur` = '$idUtilisateur' AND `fichefrais`.`mois` = '$CookieDateMonth' AND `fichefrais`.`annee` = '$CookieDateYear';");
     }

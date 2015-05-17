@@ -7,7 +7,7 @@ $date = getdate();
 $heure = date("H");
 
 switch ($heure) {
-    case ($heure >= 19): // il fait nuit
+    case ($heure >= 23): // il fait nuit
         $val = 1;
         $css = "../css/nuit.css";
         break;
