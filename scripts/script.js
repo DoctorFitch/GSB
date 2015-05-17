@@ -8,9 +8,7 @@ $('#affichage').fadeIn(1700).queue(function () {
 
 // permet un effet aimant sur les pages
 
-$.magneticScroll({
-    'selector': 'div'
-});
+
 
 
 // fais apparaitre le loader

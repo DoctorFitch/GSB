@@ -1,4 +1,5 @@
 <?php
+
 // On récupère la date d'aujourd'hui.
 $date = getdate();
 
@@ -21,11 +22,17 @@ switch ($heure) {
         $css = "../css/jour.css";
         break;
 }
+
+if(!isset($_COOKIE['user'])){
+    header('Refresh:0;url=../index.html');
+    include("../scripts/loader.php");
+}
+
 ?>
 
 
 <!doctype html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,6 +64,7 @@ switch ($heure) {
         </p>
     </div>
 </div>
+
 
 
 <!-- Affichage des formulaire de saisie -->
@@ -155,19 +163,15 @@ switch ($heure) {
 </div>
 <!-- Fin div id="continue" -->
 
-
 <!-- Consultation des fiches de frais -->
+
 
 <div id="continueplus">
 
     <!-- Titre consultation -->
     <h1>Consultation fiche de frais</h1>
-
-    <!-- Bouton qui permet d'afficher ou non le tableau recapitulatif -->
-    <button id="afficheT">Faire apparaître tableau</button>
-
+    <div id="tableauDesign">
     <!-- Tableau -->
-            <span id="tableau">
                 <?php
 
                 // On invoque le script de connexion
@@ -188,11 +192,11 @@ switch ($heure) {
 
                 // Verification de présence de données
                 if ($ligne == "") { // Si pas de données on averti l'utilisateur
-                    echo "Il n'y a aucune fiche de frais renseignés";
+                    echo "Il n'y a aucune fiche de frais renseignées";
                 } else { // Sinon on execute la requete
 
                     // Creation du tableau
-                    echo '<table border="1" cellpadding="0" cellspacing="0">';
+                    echo '<table border="2" cellpadding="10" cellspacing="0">';
                     // Creation de la premiere ligne
                     echo '<tr>';
                     // Creation des colonnes
@@ -306,11 +310,8 @@ switch ($heure) {
                     echo '</table>';
                 }
                 ?>
-
-            </span> <!-- On ferme la div id="tableau" -->
-</div>
-
-<!-- Fin div id="continueplus" -->
+    </div><!-- Tableau design -->
+</div> <!-- Fin div id="continueplus" -->
 
 
 <!-- Appel des scripts javascript pour les animations etc -->
@@ -327,49 +328,11 @@ switch ($heure) {
         });
     });﻿
 </script>
+
 <script>
-    function pop() {
-        window.open('pop','height=x,width=y,top=z,left=t,resible=no');
-    }
+    $.magneticScroll({
+        'selector': 'h1'
+    });
 </script>
-<script>
-
-    (function () {
-        // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-        if (!String.prototype.trim) {
-            (function () {
-                // Make sure we trim BOM and NBSP
-                var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-                String.prototype.trim = function () {
-                    return this.replace(rtrim, '');
-                };
-            })();
-        }
-
-        [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
-            // in case the input is already filled..
-            if (inputEl.value.trim() !== '') {
-                classie.add(inputEl.parentNode, 'input--filled');
-            }
-
-            // events:
-            inputEl.addEventListener('focus', onInputFocus);
-            inputEl.addEventListener('blur', onInputBlur);
-        });
-
-        function onInputFocus(ev) {
-            classie.add(ev.target.parentNode, 'input--filled');
-        }
-
-        function onInputBlur(ev) {
-            if (ev.target.value.trim() === '') {
-                classie.remove(ev.target.parentNode, 'input--filled');
-            }
-        }
-    })();
-
-</script>
-<!-- Fin JavaScripts -->
-
 </body>
 </html>

@@ -99,7 +99,6 @@ label
 
 #continueplus
 {
-    
     /* permet un maintient des proportions a la suite du "bonjour" resiste au redimensionnement des fenetres */
     height: 100%;
     position: absolute;
@@ -386,13 +385,11 @@ button,input,select,textarea{
 #formulaireVisiteurF {
     float: left;
     margin-left: 10%;
-    background-color: pink;
 }
 
 #formulaireVisiteurHF {
     float: right;
     margin-right: 10%;
-    background-color: black;
 }
 
 #formulaireVisiteurF h3 {
@@ -405,4 +402,52 @@ button,input,select,textarea{
     margin-top: 20%;
     text-align: center;
     margin-bottom: 20%;
+}
+
+/*************** Design du tableau ***************/
+
+#continueplus h1{
+    text-align: center;
+}
+
+#tableauDesign{
+    margin-top: 5%;
+    width: 590px;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/************ Bouton pour les formulaires *******/
+
+.cssButton{
+    margin-top: 10%;
+    width: auto;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #3bafda;
+    background-image: -moz-linear-gradient(center top , #DD4B39, #D14836);
+    border: 1px solid transparent;
+    color: #fff;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+    border-radius: 2px 2px 2px 2px;
+    font-size: 18px;
+    height: 40px;
+    min-width: 200px;
+    font-family: 'Roboto', sans-serif;
+    white-space: nowrap;
+    font-weight: bold;
+}
+.cssButton:hover{
+    background-color: white;
+    background-image: -moz-linear-gradient(center top , #DD4B39, #C53727);
+    color: #3bafda;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }

@@ -22,6 +22,11 @@
         $css = "../css/jour.css";
         break;
     }
+
+if(!isset($_COOKIE['user'])){
+    header('Refresh:0;url=../index.html');
+    include("../scripts/loader.php");
+}
 ?>
 
 <!doctype html>

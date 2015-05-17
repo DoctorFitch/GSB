@@ -40,19 +40,26 @@
 
                 // Creation d'un cookie
                 setcookie('user', $_POST['login'], 0, '/', $domain, false);
-                header('Refresh:2;url=../contents/comptable.php');
-                include("../scripts/loader.php");
-                $req->closeCursor();
-                exit;
+                if(isset($_COOKIE['user'])){
+                    header('Refresh:2;url=../contents/comptable.php');
+                    include("../scripts/loader.php");
+                    $req->closeCursor();
+                    exit;
+                }
+                else{
+                    header('Refresh:2;url=../index.html');
+                    include("../scripts/loader.php");
+                }
+
             } // si bon combo
 
             else if ($resultat && $cat == 'v') {
                 // Creation d'un cookie
                 setcookie('user', $_POST['login'], 0, '/', $domain, false);
-                header('Refresh:2;url=../contents/visiteur.php');
-                include("../scripts/loader.php");
-                $req->closeCursor();
-                exit;
+                    header('Refresh:2;url=../contents/visiteur.php');
+                    include("../scripts/loader.php");
+                    $req->closeCursor();
+                    exit;
             }
         }
     }
