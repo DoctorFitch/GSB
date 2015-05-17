@@ -407,3 +407,17 @@ button,input,select,textarea{
 #formulaireVisiteurHF h3 {
     text-align: center;
 }
+
+/**************** disposition ****************/
+
+#organisationModifDroite{
+    background-color: black;
+    float: right;
+    margin-right: 400px;
+}
+
+#organisationModifGauche{
+
+    margin-left: 400px;
+
+}

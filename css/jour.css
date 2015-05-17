@@ -385,19 +385,23 @@ button,input,select,textarea{
 
 #formulaireVisiteurF {
     float: left;
-    margin-left: 8%;
+    margin-left: 10%;
 }
 
 #formulaireVisiteurHF {
     float: right;
-    margin-right: 8%;
+    margin-right: 10%;
 
 }
 
 #formulaireVisiteurF h3 {
+    margin-top: 20%;
     text-align: center;
+    margin-bottom: 20%;
 }
 
 #formulaireVisiteurHF h3 {
+    margin-top: 20%;
     text-align: center;
+    margin-bottom: 20%;
 }

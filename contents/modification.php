@@ -57,8 +57,6 @@ $reqSQL = "SELECT annee, mois FROM `gsb`.`fichefrais` ORDER BY mois ASC";
 // d'enregistrement $result
 $resultat = $connexion->query($reqSQL) or die ("Erreur dans la requete SQL '$reqSQL'");
 
-// Affichage de la requête
-echo "Résultat de la requête : " . $reqSQL . "<hr>";
 // Lecture de la première ligne du jeu d'enregistrements et copie des données dans le tableau associatif à une dimension $ligne
 $ligne = $resultat->fetch();
 
@@ -171,6 +169,7 @@ $kmTab = $ligne4[0];
 /////////// AFFICHAGE DU TABLEAU DE FICHES HORS FRAIS /////////////////
 ///////////////////////////////////////////////////////////////////////
 
+echo '<div id="organisationModifDroite">';
 // Creation et envoi de la requete
 $selectionTableau = "SELECT id, libelle, montant FROM `gsb`.`lignefraishorsforfait` WHERE mois = '$dateMonth' AND annee = '$dateYear' ORDER BY mois ASC";
 
@@ -185,7 +184,7 @@ $numero = 1;
 
 // Verification de présence de données
 if ($ligne == "") { // Si pas de données on averti l'utilisateur
-    echo "Il n'y a aucune fiche de frais renseignés";
+
 } else { // Sinon on execute la requete
 
     // Creation du tableau
@@ -278,7 +277,7 @@ if ($ligne == "") { // Si pas de données on averti l'utilisateur
     // On ferme le tableau
     echo '</table>';
     }
-
+echo '</div>';
 
 /* suppression par l'url (methode GET) */
 if (isset($_GET['action']) && $_GET['action'] != "") {
@@ -357,6 +356,7 @@ if (isset($_POST['validation2'])) {
 }
 ?>
 
+<div id="organisationModifGauche">
 <!-- Formulaire de modification -->
 <form method="post" action="" name="feuilleFrais">
     <section class="content">
@@ -395,7 +395,8 @@ if (isset($_POST['validation2'])) {
         <input class="cssButton" type="submit" name="validation2" value="Valider">
     </section>
 </form>
-
+    </div>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="../scripts/magnetic/magneticScroll-1.0.js"></script>
@@ -409,12 +410,6 @@ if (isset($_POST['validation2'])) {
             event.preventDefault();
         });
     });
-    ﻿
-</script>
-<script>
-    function pop() {
-        window.open('pop', 'height=x,width=y,top=z,left=t,resible=no');
-    }
 </script>
 <script>
 
