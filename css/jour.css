@@ -386,12 +386,13 @@ button,input,select,textarea{
 #formulaireVisiteurF {
     float: left;
     margin-left: 10%;
+    background-color: pink;
 }
 
 #formulaireVisiteurHF {
     float: right;
     margin-right: 10%;
-
+    background-color: black;
 }
 
 #formulaireVisiteurF h3 {

@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="71191386-e2a0-45e4-86a2-b6df83c6d067" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/jour.css" afterPath="$PROJECT_DIR$/css/jour.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/login.css" afterPath="$PROJECT_DIR$/css/login.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/modification.css" afterPath="$PROJECT_DIR$/css/modification.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/modification.php" afterPath="$PROJECT_DIR$/contents/modification.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/visiteur.php" afterPath="$PROJECT_DIR$/contents/visiteur.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GSB.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,10 +35,10 @@
       <file leaf-file-name="visiteur.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contents/visiteur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.56" vertical-offset="0" max-vertical-offset="6064">
-              <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+            <state vertical-scroll-proportion="-8.16" vertical-offset="2500" max-vertical-offset="6080">
+              <caret line="169" column="12" selection-start-line="169" selection-start-column="12" selection-end-line="169" selection-end-column="31" />
               <folding>
-                <marker date="1431784017469" expanded="true" signature="6648:6748" placeholder="SELECT annee..." />
+                <marker date="1431867849116" expanded="true" signature="6648:6748" placeholder="SELECT annee..." />
               </folding>
             </state>
           </provider>
@@ -163,8 +162,8 @@
       <file leaf-file-name="jour.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/jour.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9074074" vertical-offset="5664" max-vertical-offset="6592">
-              <caret line="403" column="17" selection-start-line="403" selection-start-column="17" selection-end-line="403" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.7037037" vertical-offset="5696" max-vertical-offset="6608">
+              <caret line="394" column="27" selection-start-line="394" selection-start-column="27" selection-end-line="394" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -188,13 +187,13 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/scripts/connect.php" />
         <option value="$PROJECT_DIR$/scripts/loader.php" />
-        <option value="$PROJECT_DIR$/contents/visiteur.php" />
         <option value="$PROJECT_DIR$/scripts/update.php" />
         <option value="$PROJECT_DIR$/scripts/checkUser.php" />
         <option value="$PROJECT_DIR$/scripts/ficheFraisVisiteur.php" />
         <option value="$PROJECT_DIR$/contents/modification.php" />
         <option value="$PROJECT_DIR$/css/modification.css" />
         <option value="$PROJECT_DIR$/css/login.css" />
+        <option value="$PROJECT_DIR$/contents/visiteur.php" />
         <option value="$PROJECT_DIR$/css/jour.css" />
       </list>
     </option>
@@ -483,7 +482,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="3644" max-vertical-offset="6064">
           <caret line="244" column="55" selection-start-line="244" selection-start-column="55" selection-end-line="244" selection-end-column="55" />
           <folding>
-            <marker date="1431784017469" expanded="true" signature="6648:6748" placeholder="SELECT annee..." />
+            <marker date="1431867849116" expanded="true" signature="6648:6748" placeholder="SELECT annee..." />
           </folding>
         </state>
       </provider>
@@ -575,7 +574,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="5456" max-vertical-offset="5792">
           <caret line="341" column="38" selection-start-line="341" selection-start-column="16" selection-end-line="341" selection-end-column="38" />
           <folding>
-            <marker date="1431784017469" expanded="true" signature="6648:6748" placeholder="SELECT annee..." />
+            <marker date="1431867849116" expanded="true" signature="6648:6748" placeholder="SELECT annee..." />
           </folding>
         </state>
       </provider>
@@ -607,7 +606,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="5456" max-vertical-offset="5792">
           <caret line="341" column="38" selection-start-line="341" selection-start-column="16" selection-end-line="341" selection-end-column="38" />
           <folding>
-            <marker date="1431784017469" expanded="true" signature="6648:6748" placeholder="SELECT annee..." />
+            <marker date="1431867849116" expanded="true" signature="6648:6748" placeholder="SELECT annee..." />
           </folding>
         </state>
       </provider>
@@ -668,7 +667,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6416">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1431784017469" expanded="true" signature="6648:6748" placeholder="SELECT annee..." />
+            <marker date="1431867849116" expanded="true" signature="6648:6748" placeholder="SELECT annee..." />
           </folding>
         </state>
       </provider>
@@ -833,16 +832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contents/visiteur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.56" vertical-offset="0" max-vertical-offset="6064">
-          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-          <folding>
-            <marker date="1431784017469" expanded="true" signature="6648:6748" placeholder="SELECT annee..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/ficheFraisVisiteur.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-61.51852" vertical-offset="38" max-vertical-offset="3936">
@@ -912,10 +901,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/contents/visiteur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.16" vertical-offset="2500" max-vertical-offset="6080">
+          <caret line="169" column="12" selection-start-line="169" selection-start-column="12" selection-end-line="169" selection-end-column="31" />
+          <folding>
+            <marker date="1431867849116" expanded="true" signature="6648:6748" placeholder="SELECT annee..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/jour.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9074074" vertical-offset="5664" max-vertical-offset="6592">
-          <caret line="403" column="17" selection-start-line="403" selection-start-column="17" selection-end-line="403" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.7037037" vertical-offset="5696" max-vertical-offset="6608">
+          <caret line="394" column="27" selection-start-line="394" selection-start-column="27" selection-end-line="394" selection-end-column="27" />
           <folding />
         </state>
       </provider>

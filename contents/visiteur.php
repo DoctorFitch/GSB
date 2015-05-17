@@ -152,12 +152,12 @@ switch ($heure) {
         </form>
     </div>
     <!-- Fin div id="formulaireVisiteurHF" -->
-
 </div>
 <!-- Fin div id="continue" -->
 
 
 <!-- Consultation des fiches de frais -->
+
 <div id="continueplus">
 
     <!-- Titre consultation -->
@@ -309,6 +309,7 @@ switch ($heure) {
 
             </span> <!-- On ferme la div id="tableau" -->
 </div>
+
 <!-- Fin div id="continueplus" -->
 
 
