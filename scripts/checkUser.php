@@ -17,12 +17,10 @@
             $username = ($_POST['login']);
             $pass = ($_POST['password']);
 
-
             //Vérification des identifiants
             $req = $connexion->prepare('SELECT * FROM visiteur WHERE login = :username AND mdp = :password');
             $req->execute(array(':password' => $pass, ':username' => $username,));
             $resultat = $req->fetch();
-
 
             // Ecriture de la requête d'extraction de la categorie utilisateur
             $reqSQL = "SELECT categorie FROM visiteur WHERE login='$username'";
