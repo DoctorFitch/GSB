@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71191386-e2a0-45e4-86a2-b6df83c6d067" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/checkUser.php" afterPath="$PROJECT_DIR$/scripts/checkUser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/comptable.php" afterPath="$PROJECT_DIR$/contents/comptable.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/jour.css" afterPath="$PROJECT_DIR$/css/jour.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/magnetic/magneticScroll-1.0.js" afterPath="$PROJECT_DIR$/scripts/magnetic/magneticScroll-1.0.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/script.js" afterPath="$PROJECT_DIR$/scripts/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/modification.php" afterPath="$PROJECT_DIR$/contents/modification.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/nuit.css" afterPath="$PROJECT_DIR$/css/nuit.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/visiteur.php" afterPath="$PROJECT_DIR$/contents/visiteur.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,65 +28,50 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="comptable.php" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/contents/comptable.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="1.2479142" vertical-offset="1081" max-vertical-offset="2496">
-                    <caret line="133" column="47" selection-start-line="133" selection-start-column="47" selection-end-line="133" selection-end-column="47" />
-                    <folding>
-                      <marker date="1431870556377" expanded="true" signature="4060:4109" placeholder="SELECT nom, ..visiteur..." />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="GSB" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="modification.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contents/modification.php">
+      <file leaf-file-name="visiteur.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/contents/visiteur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.962963" vertical-offset="5142" max-vertical-offset="7408">
-              <caret line="382" column="14" selection-start-line="382" selection-start-column="14" selection-end-line="382" selection-end-column="14" />
+            <state vertical-scroll-proportion="-5.76" vertical-offset="0" max-vertical-offset="6160">
+              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
               <folding>
-                <marker date="1431866492312" expanded="true" signature="1165:1211" placeholder="SELECT id FR..Visiteur..." />
-                <marker date="1431866492312" expanded="true" signature="1677:1737" placeholder="SELECT annee..." />
-                <marker date="1431866492312" expanded="true" signature="4385:4530" placeholder="SELECT quant..." />
-                <marker date="1431866492312" expanded="true" signature="4703:4848" placeholder="SELECT quant..." />
-                <marker date="1431866492312" expanded="true" signature="5022:5167" placeholder="SELECT quant..." />
-                <marker date="1431866492312" expanded="true" signature="5336:5480" placeholder="SELECT quant..." />
-                <marker date="1431866492312" expanded="true" signature="5855:5985" placeholder="SELECT id, l..." />
-                <marker date="1431866492312" expanded="true" signature="9009:9104" placeholder="DELETE FROM ..." />
-                <marker date="1431866492312" expanded="true" signature="11277:11326" placeholder="SELECT monta..." />
-                <marker date="1431866492312" expanded="true" signature="11434:11482" placeholder="SELECT monta..." />
-                <marker date="1431866492312" expanded="true" signature="11589:11638" placeholder="SELECT monta..." />
-                <marker date="1431866492312" expanded="true" signature="11747:11796" placeholder="SELECT monta..." />
+                <marker date="1431882261237" expanded="true" signature="6662:6762" placeholder="SELECT annee..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="visiteur.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contents/visiteur.php">
+      <file leaf-file-name="login.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/login.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-30.88" vertical-offset="4556" max-vertical-offset="5488">
-              <caret line="333" column="23" selection-start-line="333" selection-start-column="23" selection-end-line="333" selection-end-column="23" />
-              <folding>
-                <marker date="1431872031049" expanded="true" signature="6662:6762" placeholder="SELECT annee..." />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="1187" max-vertical-offset="2224">
+              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jour.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/jour.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.965517" vertical-offset="6464" max-vertical-offset="7328">
+              <caret line="413" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="452" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nuit.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/nuit.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7328">
+              <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -96,81 +79,42 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="1600">
-              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="707" max-vertical-offset="1600">
+              <caret line="87" column="42" selection-start-line="87" selection-start-column="42" selection-end-line="87" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="example2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/magnetic/example2.html">
+      <file leaf-file-name="modification.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/modification.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.12" vertical-offset="0" max-vertical-offset="928">
-              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="12" selection-end-column="17" />
+            <state vertical-scroll-proportion="-25.37931" vertical-offset="3120" max-vertical-offset="5424">
+              <caret line="241" column="10" selection-start-line="241" selection-start-column="10" selection-end-line="241" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="magneticScroll-1.0.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/magnetic/magneticScroll-1.0.js">
+      <file leaf-file-name="modification.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/contents/modification.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2320">
-              <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/magnetic/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1616">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="magneticScroll-1.0.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/magnetic/magneticScroll-1.0.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="176">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7672515" vertical-offset="0" max-vertical-offset="7520">
+              <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <marker date="1431882104991" expanded="true" signature="1189:1235" placeholder="SELECT id FR..Visiteur..." />
+                <marker date="1431882104991" expanded="true" signature="1736:1796" placeholder="SELECT annee..." />
+                <marker date="1431882104991" expanded="true" signature="4461:4606" placeholder="SELECT quant..." />
+                <marker date="1431882104991" expanded="true" signature="4779:4924" placeholder="SELECT quant..." />
+                <marker date="1431882104991" expanded="true" signature="5098:5243" placeholder="SELECT quant..." />
+                <marker date="1431882104991" expanded="true" signature="5412:5556" placeholder="SELECT quant..." />
+                <marker date="1431882104991" expanded="true" signature="5967:6097" placeholder="SELECT id, l..." />
+                <marker date="1431882104991" expanded="true" signature="9114:9209" placeholder="DELETE FROM ..." />
+                <marker date="1431882104991" expanded="true" signature="11376:11425" placeholder="SELECT monta..." />
+                <marker date="1431882104991" expanded="true" signature="11533:11581" placeholder="SELECT monta..." />
+                <marker date="1431882104991" expanded="true" signature="11688:11737" placeholder="SELECT monta..." />
+                <marker date="1431882104991" expanded="true" signature="11846:11895" placeholder="SELECT monta..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/magnetic/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-29.44" vertical-offset="0" max-vertical-offset="864">
-              <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.2972975" vertical-offset="6296" max-vertical-offset="7152">
-              <caret line="415" column="0" selection-start-line="415" selection-start-column="0" selection-end-line="437" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jour.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/jour.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26539755" vertical-offset="707" max-vertical-offset="7328">
-              <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -193,8 +137,6 @@
         <option value="$PROJECT_DIR$/scripts/loader.php" />
         <option value="$PROJECT_DIR$/scripts/update.php" />
         <option value="$PROJECT_DIR$/scripts/ficheFraisVisiteur.php" />
-        <option value="$PROJECT_DIR$/contents/modification.php" />
-        <option value="$PROJECT_DIR$/css/modification.css" />
         <option value="$PROJECT_DIR$/css/login.css" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/scripts/checkUser.php" />
@@ -202,8 +144,11 @@
         <option value="$PROJECT_DIR$/scripts/magnetic/magneticScroll-1.0.js" />
         <option value="$PROJECT_DIR$/scripts/magnetic/style.css" />
         <option value="$PROJECT_DIR$/scripts/script.js" />
-        <option value="$PROJECT_DIR$/contents/visiteur.php" />
+        <option value="$PROJECT_DIR$/css/modification.css" />
         <option value="$PROJECT_DIR$/css/jour.css" />
+        <option value="$PROJECT_DIR$/contents/modification.php" />
+        <option value="$PROJECT_DIR$/contents/visiteur.php" />
+        <option value="$PROJECT_DIR$/css/nuit.css" />
       </list>
     </option>
   </component>
@@ -480,18 +425,18 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1776">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1431866492312" expanded="true" signature="1165:1211" placeholder="SELECT id FR..Visiteur..." />
-            <marker date="1431866492312" expanded="true" signature="1677:1737" placeholder="SELECT annee..." />
-            <marker date="1431866492312" expanded="true" signature="4385:4530" placeholder="SELECT quant..." />
-            <marker date="1431866492312" expanded="true" signature="4703:4848" placeholder="SELECT quant..." />
-            <marker date="1431866492312" expanded="true" signature="5022:5167" placeholder="SELECT quant..." />
-            <marker date="1431866492312" expanded="true" signature="5336:5480" placeholder="SELECT quant..." />
-            <marker date="1431866492312" expanded="true" signature="5855:5985" placeholder="SELECT id, l..." />
-            <marker date="1431866492312" expanded="true" signature="9009:9104" placeholder="DELETE FROM ..." />
-            <marker date="1431866492312" expanded="true" signature="11277:11326" placeholder="SELECT monta..." />
-            <marker date="1431866492312" expanded="true" signature="11434:11482" placeholder="SELECT monta..." />
-            <marker date="1431866492312" expanded="true" signature="11589:11638" placeholder="SELECT monta..." />
-            <marker date="1431866492312" expanded="true" signature="11747:11796" placeholder="SELECT monta..." />
+            <marker date="1431882104991" expanded="true" signature="1189:1235" placeholder="SELECT id FR..Visiteur..." />
+            <marker date="1431882104991" expanded="true" signature="1736:1796" placeholder="SELECT annee..." />
+            <marker date="1431882104991" expanded="true" signature="4461:4606" placeholder="SELECT quant..." />
+            <marker date="1431882104991" expanded="true" signature="4779:4924" placeholder="SELECT quant..." />
+            <marker date="1431882104991" expanded="true" signature="5098:5243" placeholder="SELECT quant..." />
+            <marker date="1431882104991" expanded="true" signature="5412:5556" placeholder="SELECT quant..." />
+            <marker date="1431882104991" expanded="true" signature="5967:6097" placeholder="SELECT id, l..." />
+            <marker date="1431882104991" expanded="true" signature="9114:9209" placeholder="DELETE FROM ..." />
+            <marker date="1431882104991" expanded="true" signature="11376:11425" placeholder="SELECT monta..." />
+            <marker date="1431882104991" expanded="true" signature="11533:11581" placeholder="SELECT monta..." />
+            <marker date="1431882104991" expanded="true" signature="11688:11737" placeholder="SELECT monta..." />
+            <marker date="1431882104991" expanded="true" signature="11846:11895" placeholder="SELECT monta..." />
           </folding>
         </state>
       </provider>
@@ -533,7 +478,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1392" max-vertical-offset="2416">
           <caret line="97" column="12" selection-start-line="97" selection-start-column="12" selection-end-line="135" selection-end-column="18" />
           <folding>
-            <marker date="1431870556377" expanded="true" signature="4060:4109" placeholder="SELECT nom, ..visiteur..." />
+            <marker date="1431870556377" expanded="true" signature="-1:-1" placeholder="SELECT nom, ..visiteur..." />
           </folding>
         </state>
       </provider>
@@ -565,7 +510,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="5456" max-vertical-offset="5792">
           <caret line="341" column="38" selection-start-line="341" selection-start-column="16" selection-end-line="341" selection-end-column="38" />
           <folding>
-            <marker date="1431872031049" expanded="true" signature="6662:6762" placeholder="SELECT annee..." />
+            <marker date="1431882261237" expanded="true" signature="6662:6762" placeholder="SELECT annee..." />
           </folding>
         </state>
       </provider>
@@ -597,7 +542,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="5456" max-vertical-offset="5792">
           <caret line="341" column="38" selection-start-line="341" selection-start-column="16" selection-end-line="341" selection-end-column="38" />
           <folding>
-            <marker date="1431872031049" expanded="true" signature="6662:6762" placeholder="SELECT annee..." />
+            <marker date="1431882261237" expanded="true" signature="6662:6762" placeholder="SELECT annee..." />
           </folding>
         </state>
       </provider>
@@ -658,7 +603,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6416">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1431872031049" expanded="true" signature="6662:6762" placeholder="SELECT annee..." />
+            <marker date="1431882261237" expanded="true" signature="6662:6762" placeholder="SELECT annee..." />
           </folding>
         </state>
       </provider>
@@ -726,13 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/nuit.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2960">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/normalize.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1337" max-vertical-offset="2256">
@@ -759,22 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.94385964" vertical-offset="617" max-vertical-offset="1536">
           <caret line="89" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/modification.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5955" max-vertical-offset="6848">
-          <caret line="388" column="0" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="42.482758" vertical-offset="1360" max-vertical-offset="2224">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -851,14 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/magnetic/example2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.12" vertical-offset="0" max-vertical-offset="928">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="12" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/magnetic/magneticScroll-1.0.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="2320">
@@ -875,31 +789,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/magnetic/magneticScroll-1.0.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/magnetic/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-29.44" vertical-offset="0" max-vertical-offset="864">
           <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="24" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contents/comptable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2479142" vertical-offset="1081" max-vertical-offset="2496">
-          <caret line="133" column="47" selection-start-line="133" selection-start-column="47" selection-end-line="133" selection-end-column="47" />
-          <folding>
-            <marker date="1431870556377" expanded="true" signature="4060:4109" placeholder="SELECT nom, ..visiteur..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -911,50 +805,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contents/modification.php">
+    <entry file="file://$PROJECT_DIR$/contents/comptable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.962963" vertical-offset="5142" max-vertical-offset="7408">
-          <caret line="382" column="14" selection-start-line="382" selection-start-column="14" selection-end-line="382" selection-end-column="14" />
+        <state vertical-scroll-proportion="1.2479142" vertical-offset="1081" max-vertical-offset="2496">
+          <caret line="133" column="47" selection-start-line="133" selection-start-column="47" selection-end-line="133" selection-end-column="47" />
           <folding>
-            <marker date="1431866492312" expanded="true" signature="1165:1211" placeholder="SELECT id FR..Visiteur..." />
-            <marker date="1431866492312" expanded="true" signature="1677:1737" placeholder="SELECT annee..." />
-            <marker date="1431866492312" expanded="true" signature="4385:4530" placeholder="SELECT quant..." />
-            <marker date="1431866492312" expanded="true" signature="4703:4848" placeholder="SELECT quant..." />
-            <marker date="1431866492312" expanded="true" signature="5022:5167" placeholder="SELECT quant..." />
-            <marker date="1431866492312" expanded="true" signature="5336:5480" placeholder="SELECT quant..." />
-            <marker date="1431866492312" expanded="true" signature="5855:5985" placeholder="SELECT id, l..." />
-            <marker date="1431866492312" expanded="true" signature="9009:9104" placeholder="DELETE FROM ..." />
-            <marker date="1431866492312" expanded="true" signature="11277:11326" placeholder="SELECT monta..." />
-            <marker date="1431866492312" expanded="true" signature="11434:11482" placeholder="SELECT monta..." />
-            <marker date="1431866492312" expanded="true" signature="11589:11638" placeholder="SELECT monta..." />
-            <marker date="1431866492312" expanded="true" signature="11747:11796" placeholder="SELECT monta..." />
+            <marker date="1431870556377" expanded="true" signature="-1:-1" placeholder="SELECT nom, ..visiteur..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/magnetic/example2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1497076" vertical-offset="0" max-vertical-offset="928">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/magnetic/magneticScroll-1.0.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="1600">
-          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="707" max-vertical-offset="1600">
+          <caret line="87" column="42" selection-start-line="87" selection-start-column="42" selection-end-line="87" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1187" max-vertical-offset="2224">
+          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/modification.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.37931" vertical-offset="3120" max-vertical-offset="5424">
+          <caret line="241" column="10" selection-start-line="241" selection-start-column="10" selection-end-line="241" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/contents/visiteur.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-30.88" vertical-offset="4556" max-vertical-offset="5488">
-          <caret line="333" column="23" selection-start-line="333" selection-start-column="23" selection-end-line="333" selection-end-column="23" />
+        <state vertical-scroll-proportion="-5.76" vertical-offset="0" max-vertical-offset="6160">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
           <folding>
-            <marker date="1431872031049" expanded="true" signature="6662:6762" placeholder="SELECT annee..." />
+            <marker date="1431882261237" expanded="true" signature="6662:6762" placeholder="SELECT annee..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/jour.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26539755" vertical-offset="707" max-vertical-offset="7328">
-          <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+        <state vertical-scroll-proportion="-4.965517" vertical-offset="6464" max-vertical-offset="7328">
+          <caret line="413" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="452" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/nuit.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7328">
+          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contents/modification.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7672515" vertical-offset="0" max-vertical-offset="7520">
+          <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
+          <folding>
+            <marker date="1431882104991" expanded="true" signature="1189:1235" placeholder="SELECT id FR..Visiteur..." />
+            <marker date="1431882104991" expanded="true" signature="1736:1796" placeholder="SELECT annee..." />
+            <marker date="1431882104991" expanded="true" signature="4461:4606" placeholder="SELECT quant..." />
+            <marker date="1431882104991" expanded="true" signature="4779:4924" placeholder="SELECT quant..." />
+            <marker date="1431882104991" expanded="true" signature="5098:5243" placeholder="SELECT quant..." />
+            <marker date="1431882104991" expanded="true" signature="5412:5556" placeholder="SELECT quant..." />
+            <marker date="1431882104991" expanded="true" signature="5967:6097" placeholder="SELECT id, l..." />
+            <marker date="1431882104991" expanded="true" signature="9114:9209" placeholder="DELETE FROM ..." />
+            <marker date="1431882104991" expanded="true" signature="11376:11425" placeholder="SELECT monta..." />
+            <marker date="1431882104991" expanded="true" signature="11533:11581" placeholder="SELECT monta..." />
+            <marker date="1431882104991" expanded="true" signature="11688:11737" placeholder="SELECT monta..." />
+            <marker date="1431882104991" expanded="true" signature="11846:11895" placeholder="SELECT monta..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,20 +1,17 @@
 /*=== POLICE ===*/
 
-@font-face 
-{
-    font-family : "AvenirLt";
-    src: url('../fonts/Avenir/AvenirNextLTPro-Regular.woff');
-} /* avenir police */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto);
 
 /*=== BODY ===*/
 
 body
 {
     height: 100%;
-    margin: 0px;   
+    margin: 0px;
     padding: 0px;
-    background-color: #37bc9b;
-    font-family: 'AvenirLt';
+    background-color: #46D2FF;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -23,11 +20,10 @@ body
 #resultatCookie
 {
     /* coloration du fond + taille texte */
-    background-color: #2c3e50;
-    font-family: 'AvenirLt';
+    background-color: #353F49;
     font-size: 130px;
     color: #fff;
-    
+
     /* coloration integrale de la div */
     position:absolute;
     top:0;
@@ -48,7 +44,7 @@ body
 }
 
 #resultatCookie p{
-    
+
     /* centrage verticale de la div <p> */
     position: absolute;
     margin: auto;
@@ -57,7 +53,7 @@ body
 
 /*=== >> FORMULAIRE DE SAISIE ===*/
 
-#continue 
+#continue
 {
     /* permet un maintient des proportions a la suite du "bonjour" resiste au redimensionnement des fenetres */
     height: 100%;
@@ -66,23 +62,23 @@ body
     bottom:0;
     left:0;
     right:0;
-    background-color: #1abc9c;
     overflow:hidden;
+
 }
 
 #continue h1
 {
     /* permet un maintient des proportions a la suite du "bonjour" resiste au redimensionnement des fenetres */
-    font-family: 'AvenirLt';
+
     text-align: center;
 }
 
-.h3 
+.h3
 {
     font-weight: 900;
 }
 
-label 
+label
 {
     display: block;
     float: left;
@@ -92,6 +88,14 @@ label
 
 
 /*=== >> CONSULTATION DES FICHES DE FRAIS ===*/
+
+/* Bouton pour faire apparaitre fiche de frais */
+
+#afficheT{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
 
 #continueplus
 {
@@ -103,78 +107,347 @@ label
     left:0;
     right:0;
     overflow:hidden;
-    background-color: #13C4D3;
+    background-color: #93E4FF;
 }
 
-#pierre 
+#tableau{
+    display:none;
+}
+
+#pierre
 {
     height: 100px;
     width: 100px;
     background-color: red;
 }
 
-/* ////////////////////// TESSSSTTTT ////////////////// */
-
-* {
- 	box-sizing:border-box;
+/*	$Loader Carre
+========================================================================== */
+#loader {
+    display: none;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -100%;
+    top: 0;
+    width: 100%;
+}
+#loader:after {
+    background: #de4957;
+    content: '';
+    display: inline-block;
+    height: 50px;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    -webkit-animation: myanim 2s infinite;
+    -moz-animation: myanim 2s infinite;
+    -o-animation: myanim 2s infinite;
+    animation: myanim 2s infinite;
 }
 
-body {
-  background:#010101;
-  overflow:hidden;
+@-webkit-keyframes myanim {
+    0% {
+        -webkit-transform: rotate(0);
+    }
+    50% {
+        -webkit-transform: rotate(145deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
 
-#star {
-  position:absolute;
-  left:50%;
-  top:50%;
-  width:250px;
-  height:250px;
-  margin-left:-125px;
-  margin-top:-125px; 
-  border-radius:50%;
-  background:#DBE6E0;
-  box-shadow:0 0 50px rgba(219,230,224,1);
+/** Normalisation **/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+
+
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
 }
 
-#planet {
-  position:absolute;
-  left:10px;
-  top:1px;
-  width:250px;
-  height:250px;
-  border-radius:50%;
-  background:#010101;
-  box-shadow:inset 0 0 50px rgba(150,150,150,0.2);
-  animation:eclipse 10s infinite linear;
-  transform-origin:50% 150%;
-  transform:rotate(-60deg);
+.content {
+    font-size: 150%;
+
 }
 
-@-moz-keyframes eclipse {
-  0% {
-   	transform:rotate(-60deg); 
-  }
-  
-  90% {
-   	transform:rotate(30deg); 
-  }
-  
-  100%{
-    transform:rotate(300deg);
-  }
+button,input,select,textarea{
+    font-family: 'Roboto', sans-serif;
+    font-size:100%;
+    margin:0;
 }
 
-@-webkit-keyframes eclipse {
- 	0% {
-   	transform:rotate(-60deg); 
-  }
-  
-  90% {
-   	transform:rotate(30deg); 
-  }
-  
-  100%{
-    transform:rotate(300deg);
-  }
+/* partie set1 */
+
+.input {
+    position: relative;
+    z-index: 1;
+    font-family: 'Roboto', sans-serif;
+    display: table;
+
+    /*lel*/
+
+    /* centrage verticale */
+    margin: auto;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+
+}
+
+.input__field {
+    position: relative;
+    display: block;
+    float: right;
+    padding: 0.8em;
+    width: 60%;
+    border: none;
+    border-radius: 0;
+    background: #3bafda;
+    color: red;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    -webkit-appearance: none; /* for box shadows to show on iOS */
+}
+
+.input__field:focus {
+    outline: none;
+}
+
+.input__label {
+    display: inline-block;
+    float: right;
+    padding: 0 1em;
+    width: 40%;
+    color: white;
+    font-weight: bold;
+    font-size: 70.25%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.input__label-content {
+    position: relative;
+    display: block;
+    padding: 1.6em 0;
+    width: 100%;
+}
+
+.graphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: none;
+}
+
+/** HOSHI **/
+
+
+.input--hoshi {
+    overflow: hidden;
+}
+
+.input__field--hoshi {
+    margin-top: 1em;
+    padding: 0.85em 0.15em;
+    width: 100%;
+    background: transparent;
+    color: #23697F;
+}
+
+.input__field--hoshiDATE {
+    margin-top: 1em;
+    padding: 0.85em 0.15em;
+    width: 100%;
+    background: transparent;
+    color: #46D2FF;
+}
+
+
+
+.input__label--hoshi {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 0.25em;
+    width: 100%;
+    height: calc(100% - 1em);
+    text-align: left;
+    pointer-events: none;
+}
+
+
+
+.input__label-content--hoshi {
+    position: absolute;
+}
+
+.input__label--hoshi::before,
+.input__label--hoshi::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 10px);
+    border-bottom: 2px solid #3bafda;
+}
+
+.input__label--hoshi::after {
+    margin-top: 2px;
+    border-bottom: 4px solid red;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.input__label--hoshi-color-1::after {
+    border-color: white;
+}
+
+.input__label--hoshi-color-2::after {
+    border-color: white;
+}
+
+
+
+.input__field--hoshi:focus + .input__label--hoshi::after,
+.input--filled .input__label--hoshi::after {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.input__field--hoshi:focus + .input__label--hoshi .input__label-content--hoshi,
+.input--filled .input__label-content--hoshi {
+    -webkit-animation: anim-1 0.3s forwards;
+    animation: anim-1 0.3s forwards;
+}
+
+@-webkit-keyframes anim-1 {
+    50% {
+        opacity: 0;
+        -webkit-transform: translate3d(1em, 0, 0);
+        transform: translate3d(1em, 0, 0);
+    }
+    51% {
+        opacity: 0;
+        -webkit-transform: translate3d(-1em, -40%, 0);
+        transform: translate3d(-1em, -40%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -40%, 0);
+        transform: translate3d(0, -40%, 0);
+    }
+}
+
+@keyframes anim-1 {
+    50% {
+        opacity: 0;
+        -webkit-transform: translate3d(1em, 0, 0);
+        transform: translate3d(1em, 0, 0);
+    }
+    51% {
+        opacity: 0;
+        -webkit-transform: translate3d(-1em, -40%, 0);
+        transform: translate3d(-1em, -40%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -40%, 0);
+        transform: translate3d(0, -40%, 0);
+    }
+}
+
+/************ Partie formulaire *****************/
+
+#formulaireVisiteurF {
+    float: left;
+    margin-left: 10%;
+}
+
+#formulaireVisiteurHF {
+    float: right;
+    margin-right: 10%;
+}
+
+#formulaireVisiteurF h3 {
+    margin-top: 20%;
+    text-align: center;
+    margin-bottom: 20%;
+}
+
+#formulaireVisiteurHF h3 {
+    margin-top: 20%;
+    text-align: center;
+    margin-bottom: 20%;
+}
+
+/*************** Design du tableau ***************/
+
+#continueplus h1{
+    text-align: center;
+}
+
+#tableauDesign{
+    margin-top: 5%;
+    width: 590px;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/************ Bouton pour les formulaires *******/
+
+.cssButton{
+    margin-top: 10%;
+    width: auto;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #3bafda;
+    background-image: -moz-linear-gradient(center top , #DD4B39, #D14836);
+    border: 1px solid transparent;
+    color: #fff;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+    border-radius: 2px 2px 2px 2px;
+    font-size: 18px;
+    height: 40px;
+    min-width: 200px;
+    font-family: 'Roboto', sans-serif;
+    white-space: nowrap;
+    font-weight: bold;
+}
+.cssButton:hover{
+    background-color: white;
+    background-image: -moz-linear-gradient(center top , #DD4B39, #C53727);
+    color: #3bafda;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }

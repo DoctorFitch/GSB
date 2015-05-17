@@ -293,7 +293,7 @@ if (isset($_GET['action']) && $_GET['action'] != "") {
 
 
 if (isset($_POST['validation2'])) {
-    
+
 
     @$CookieDateMonth = $_COOKIE['dateMonth'];
     @$CookieDateYear = $_COOKIE['dateYear'];
@@ -363,7 +363,7 @@ if (isset($_POST['validation2'])) {
 ?>
 
 <div id="organisationModifGauche">
-<h3>Frais hors-forfait</h3>
+<h3>Frais forfait</h3>
 <!-- Formulaire de modification -->
 <form method="post" action="" name="feuilleFrais">
     <section class="content">
