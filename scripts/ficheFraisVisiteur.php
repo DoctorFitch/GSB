@@ -5,8 +5,8 @@ include("../scripts/checkUser.php");
 
 // obtention de l'id de l'utilisateur
 $sqlIdentifiant = "SELECT id
-                       FROM Visiteur 
-                       WHERE login = 'dandre' AND mdp = 'oppg5';";
+                       FROM visiteur 
+                       WHERE login ='dandre'";
 
 $resultIdentifiant = $connexion->query($sqlIdentifiant) or die ("Erreur morray");
 $ligne = $resultIdentifiant->fetch();

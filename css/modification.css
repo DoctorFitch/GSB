@@ -1,17 +1,20 @@
 /*=== POLICE ===*/
 
-
-@import url(http://fonts.googleapis.com/css?family=Roboto);
+@font-face
+{
+    font-family : "AvenirLt";
+    src: url('../fonts/Avenir/AvenirNextLTPro-Regular.woff');
+} /* avenir police */
 
 /*=== BODY ===*/
 
 body
 {
     height: 100%;
-    margin: 0px;   
+    margin: 0px;
     padding: 0px;
     background-color: #de4957;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'AvenirLt';
 }
 
 
@@ -21,6 +24,7 @@ body
 {
     /* coloration du fond + taille texte */
     background-color: #3bafda;
+    font-family: 'AvenirLt';
     font-size: 130px;
     color: #fff;
 
@@ -53,7 +57,7 @@ body
 
 /*=== >> FORMULAIRE DE SAISIE ===*/
 
-#continue 
+#continue
 {
     /* permet un maintient des proportions a la suite du "bonjour" resiste au redimensionnement des fenetres */
     height: 100%;
@@ -69,11 +73,11 @@ body
 #continue h1
 {
     /* permet un maintient des proportions a la suite du "bonjour" resiste au redimensionnement des fenetres */
-
+    font-family: 'AvenirLt';
     text-align: center;
 }
 
-.h3 
+.h3
 {
     font-weight: 900;
 }
@@ -99,7 +103,7 @@ label
 
 #continueplus
 {
-    
+
     /* permet un maintient des proportions a la suite du "bonjour" resiste au redimensionnement des fenetres */
     height: 100%;
     position: absolute;
@@ -115,7 +119,7 @@ label
     display:none;
 }
 
-#pierre 
+#pierre
 {
     height: 100px;
     width: 100px;
@@ -182,6 +186,8 @@ label
 
 .content {
     font-size: 150%;
+    float: left;
+    
 
 }
 

@@ -217,39 +217,39 @@ switch ($heure) {
 
                         // lisibilité de la date
                         switch ($mois) {
-                            case 01:
+                            case 1:
                                 $dateFinale = 'Janvier' . " " . $annee;
                                 break;
 
-                            case 02:
+                            case 2:
                                 $dateFinale = 'Fevrier' . " " . $annee;
                                 break;
 
-                            case 03:
+                            case 3:
                                 $dateFinale = 'Mars' . " " . $annee;
                                 break;
 
-                            case 04:
+                            case 4:
                                 $dateFinale = 'Avril' . " " . $annee;
                                 break;
 
-                            case 05:
+                            case 5:
                                 $dateFinale = 'Mai' . " " . $annee;
                                 break;
 
-                            case 06:
+                            case 6:
                                 $dateFinale = 'Juin' . " " . $annee;
                                 break;
 
-                            case 07:
+                            case 7:
                                 $dateFinale = 'Juillet' . " " . $annee;
                                 break;
 
-                            case 08:
+                            case 8:
                                 $dateFinale = 'Aout' . " " . $annee;
                                 break;
 
-                            case 09:
+                            case 9:
                                 $dateFinale = 'Septembre' . " " . $annee;
                                 break;
 
